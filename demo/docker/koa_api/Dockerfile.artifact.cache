@@ -1,0 +1,22 @@
+FROM zelejs/allin-web:git AS git
+
+####################################
+# RUN ssh-keyscan -p 7207 git.f.smallsaas.cn >> ~/.ssh/known_hosts
+RUN ssh-keyscan gitee.com >> ~/.ssh/known_hosts
+WORKDIR /usr
+RUN git clone git@gitee.com:smallsaas/demo.smallsaas.cn.git src
+
+# git@49.119.119.7:/home/git/apps/nft.git
+######################################
+
+FROM daocloud.io/library/node:12 AS build
+
+
+WORKDIR /usr/src
+COPY --from=git /usr/src/koa_api/*  ./
+
+RUN npm config set registtry https://registry.npm.taobao.org
+
+RUN npm install --force
+
+CMD ["sh", "-c", "/bin/cp -r /usr/src/node_modules/* /var/node_modules"]

@@ -1,0 +1,18 @@
+FROM zelejs/allin-web:git AS git
+
+# RUN ssh-keyscan -p 7207 git.f.smallsaas.cn >> ~/.ssh/known_hosts
+RUN ssh-keyscan gitee.com >> ~/.ssh/known_hosts
+WORKDIR /usr
+
+# RUN git clone ssh://git@git.f.smallsaas.cn:7207/repo/git/zero-element-admin/zero-element-admin.git --single-branch -b main src
+RUN git clone git@gitee.com:smallsaas/zero-element-admin.git src
+
+FROM daocloud.io/library/node:12 AS build
+
+
+WORKDIR /usr/src
+COPY --from=git /usr/src/* ./
+COPY --from=git /usr/src/package.json ./package.json
+RUN npm config set registry https://registry.npm.taobao.org
+
+RUN npm install --force

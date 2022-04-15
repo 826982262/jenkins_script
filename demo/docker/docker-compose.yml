@@ -1,0 +1,82 @@
+version: "3.4"
+services:
+  koa:
+    image: 'daocloud.io/library/node:14'
+    container_name: demo-koa
+    privileged: true
+    restart: always
+    working_dir: /usr/src
+    volumes:
+      - ./koa_api:/usr/src
+    command: 
+      - npm
+      - start
+  api:
+    image: adoptopenjdk:11-jre-hotspot
+    container_name: demo-api
+    privileged: true
+    restart: always
+    working_dir: /webapps
+    volumes: 
+      - ./api/config/application-uat.yml:/webapps/config/application-uat.yml
+      - ./api:/webapps
+    # ports: 
+    #   - 8080:8080
+    logging: 
+      driver: "json-file"
+      options: 
+        max-size: "5m"
+    command:
+      - /bin/sh
+      - -c
+      - |
+        java -jar *-standalone.jar --spring.profiles.active=uat --server.port=8080
+  
+  pageconfigwebapi:
+    image: demo-pageconfig.webapi:build-webapi-1
+    container_name: demo-pageconfigwebapi
+    restart: always
+    # build:
+      # context: .
+      # dockerfile: ./pageconfig.webapi/Dockerfile
+    ports:
+      - 5002:5000
+  nginx:  
+    image: 'daocloud.io/library/nginx:stable'
+    container_name: demo-gw
+    privileged: true
+    restart: always
+    ports:
+      - 8001:80
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "5m"
+    volumes:
+      - ./web/conf.d:/etc/nginx/conf.d
+      - ./web/logs:/var/log/nginx
+      - ./dist:/usr/share/nginx/html
+      - ./web/config/config.js:/usr/share/nginx/html/config.js
+      - ./api/attachments:/usr/share/nginx/html/attachments
+    depends_on:
+      - api
+
+#   mysqlserver:
+#     image: daocloud.io/library/mysql:5.7
+#     # container_name: mysqlserver
+#     privileged: true
+#     environment:
+#         MYSQL_ROOT_PASSWORD: root
+#         MYSQL_DATABASE: smallsaasdemo
+#     volumes:
+#         - ./api/mysql.conf.d/sql_mode.cnf:/etc/mysql/mysql.conf.d/sql_mode.cnf
+#         - smallsaasdemo_data:/var/lib/mysql
+
+#   # busybox:
+#   #   image: daocloud.io/library/busybox
+#   #   container_name: busybox
+
+networks:
+  default:
+    external:
+      name: demo_default

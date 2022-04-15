@@ -1,0 +1,1 @@
+docker build -f Dockerfile.webapi.build . --force-rm -t demo-pageconfig.webapi:build-webapi-1 --no-cache

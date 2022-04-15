@@ -1,0 +1,23 @@
+FROM zelejs/allin-web:git AS git
+
+# RUN ssh-keyscan -p 7207 git.f.smallsaas.cn >> ~/.ssh/known_hosts
+RUN ssh-keyscan gitee.com >> ~/.ssh/known_hosts
+WORKDIR /usr
+
+# RUN git clone ssh://git@git.f.smallsaas.cn:7207/repo/git/zero-element-admin/zero-element-admin.git --single-branch -b main src
+RUN git clone git@gitee.com:smallsaas/zero-element-admin.git src
+FROM allin-web:cache-web-2 as build
+
+WORKDIR /usr/src
+COPY --from=git /usr/src/package.json  ./package.json
+COPY --from=git /usr/src/webpack.config.js  ./webpack.config.js
+COPY --from=git /usr/src/src ./src
+COPY --from=git /usr/src/public ./public
+COPY --from=git /usr/src/init.js ./init.js
+
+RUN rm -rf node_modules/zero-element-antd
+RUN npm i  git+https://gitee.com/smallsaas/zero-element-antd.git
+RUN npm run build
+
+
+CMD ["sh","-c","/bin/cp -r /usr/src/dist/* /var/dist"]

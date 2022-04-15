@@ -1,0 +1,30 @@
+## m2 stage
+FROM zelejs/allin-web:alpine-m2 AS m2
+
+## src stage
+FROM zelejs/allin-web:git AS git
+######################################
+RUN ssh-keyscan gitee.com >> ~/.ssh/known_hosts
+WORKDIR /usr
+RUN git clone git@gitee.com:smallsaas/demo.smallsaas.cn.git src
+######################################
+
+
+#cache-stage
+FROM allin-web:cache-artifact-1 as cache
+
+#builk-stage
+FROM maven:3.6-openjdk-11-slim AS build
+
+WORKDIR /root/.m2
+COPY --from=cache /root/.m2 /root/.m2
+
+
+WORKDIR /usr/src
+COPY --from=git /usr/src/api/src/pom.xml  ./pom.xml
+COPY --from=git /usr/src/api/src/src ./src
+RUN mvn -DskipStandalone=false package -Dmaven.test.skip=true
+
+
+#final-stage
+CMD ["sh", "-c", "/bin/cp /usr/src/target/*-standalone.jar /var/webapps"]

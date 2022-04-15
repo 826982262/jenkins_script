@@ -1,0 +1,33 @@
+FROM zelejs/allin-web:git AS git
+
+####################################
+# RUN ssh-keyscan -p 7207 git.f.smallsaas.cn >> ~/.ssh/known_hosts
+RUN ssh-keyscan gitee.com >> ~/.ssh/known_hosts
+WORKDIR /usr
+RUN git clone git@gitee.com:smallsaas/demo.smallsaas.cn.git src
+
+# git@49.119.119.7:/home/git/apps/nft.git
+######################################
+
+## m2 stage
+FROM zelejs/allin-web:alpine-m2 AS m2
+# FROM zelejs/allin-web:cache-artifact-1 AS m2
+
+#builk-stage
+FROM maven:3.6-openjdk-11-slim AS build
+WORKDIR /root/.m2
+COPY --from=m2 /root/.m2 /root/.m2
+
+
+
+WORKDIR /usr/src
+COPY --from=git /usr/src/api/src/pom.xml  ./pom.xml
+COPY --from=git /usr/src/api/src/src ./src
+RUN mvn -DskipStandalone=true install -Dmaven.test.skip=true
+
+RUN rm -rf /root/.m2/repository/com/jfeat/
+
+## final-cache
+FROM alpine:3.12
+WORKDIR /root/.m2
+COPY --from=build /root/.m2 /root/.m2
