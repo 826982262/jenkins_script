@@ -1,0 +1,1 @@
+docker build -f Dockerfile.artifact.cache . --force-rm -t auto-api:cache-artifact-1 --no-cache

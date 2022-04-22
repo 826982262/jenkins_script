@@ -1,0 +1,55 @@
+FROM zelejs/allin-web:git AS git
+
+#RUN ssh-keyscan gitee.com >> ~/.ssh/known_hosts
+RUN ssh-keyscan -p 7207 git.f.smallsaas.cn >> ~/.ssh/known_hosts
+WORKDIR /usr
+
+#RUN git clone git@gitee.com:smallsaas/auto-api.git --single-branch -b master src
+RUN git clone --depth=1 ssh://git@git.f.smallsaas.cn:7207/repo/git/sports-ai-api.git --single-branch -b master src
+## m2 stage
+FROM zelejs/allin-web:alpine-m2 AS m2
+
+#builk-stage
+FROM maven:3.6-openjdk-11-slim AS build
+
+WORKDIR /root/m2
+COPY --from=m2 /root/.m2 /root/.m2
+
+## mvn package
+WORKDIR /usr/src/banner
+COPY --from=git /usr/src/banner/src ./src
+COPY --from=git /usr/src/banner/pom.xml ./pom.xml
+RUN mvn -DskipStandalone=false package -Dmaven.test.skip=true
+## mvn package
+WORKDIR /usr/src/enforcement
+COPY --from=git /usr/src/enforcement/src ./src
+COPY --from=git /usr/src/enforcement/pom.xml ./pom.xml
+RUN mvn -DskipStandalone=false package -Dmaven.test.skip=true
+
+## mvn package
+WORKDIR /usr/src/mobile
+COPY --from=git /usr/src/mobile/src ./src
+COPY --from=git /usr/src/mobile/pom.xml ./pom.xml
+RUN mvn -DskipStandalone=false package -Dmaven.test.skip=true
+
+## mvn package
+WORKDIR /usr/src/oauth
+COPY --from=git /usr/src/oauth/src ./src
+COPY --from=git /usr/src/oauth/pom.xml ./pom.xml
+RUN mvn -DskipStandalone=false package -Dmaven.test.skip=true
+
+## mvn package
+WORKDIR /usr/src/sports-ai-api
+COPY --from=git /usr/src/sports-ai-api/src ./src
+COPY --from=git /usr/src/sports-ai-api/pom.xml ./pom.xml
+RUN mvn -DskipStandalone=false package -Dmaven.test.skip=true
+
+WORKDIR /usr/src
+
+COPY --from=git /usr/src/pom.xml ./pom.xml
+RUN mvn -DskipStandalone=false package -Dmaven.test.skip=true
+
+## final-cache
+FROM zelejs/allin-web:alpine-m2 
+WORKDIR /root/.m2
+COPY --from=build /root/.m2 /root/.m2

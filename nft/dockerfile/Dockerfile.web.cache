@@ -1,0 +1,25 @@
+FROM zelejs/allin-web:git AS git
+
+# RUN ssh-keyscan -p 7022 git.f.smallsaas.cn >> ~/.ssh/known_hosts
+RUN ssh-keyscan -p 7207 git.f.smallsaas.cn >> ~/.ssh/known_hosts
+# RUN ssh-keyscan 192.168.3.239 >> ~/.ssh/known_hosts
+#RUN ssh-keyscan gitee.com >> ~/.ssh/known_hosts
+WORKDIR /usr
+RUN git clone ssh://pi@git.f.smallsaas.cn:7207/repo/git/nft/nft-web.git --single-branch -b authorize src
+# RUN git clone ssh://git@192.168.3.239/repo/git/nft/nft-web.git --single-branch -b authorize src
+#RUN git clone git@gitee.com:smallsaas/nft-web.git --single-branch -b master src
+
+
+FROM daocloud.io/library/node:14 AS build
+
+WORKDIR /usr/src
+COPY --from=git /usr/src/package.json  ./package.json
+COPY --from=git /usr/src/webpack.config.js  ./webpack.config.js
+COPY --from=git /usr/src/src ./src
+COPY --from=git /usr/src/public ./public
+COPY --from=git /usr/src/init.js ./init.js
+
+
+RUN npm config set registtry https://registry.npm.taobao.org
+
+RUN npm install --force

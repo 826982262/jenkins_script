@@ -1,0 +1,39 @@
+## m2 stage
+FROM zelejs/allin-web:alpine-m2 AS m2
+
+## src stage
+FROM zelejs/allin-web:git AS git
+######################################
+# RUN ssh-keyscan 49.119.119.4 > ~/.ssh/known_hosts
+RUN ssh-keyscan -p 7207 git.f.smallsaas.cn >> ~/.ssh/known_hosts
+WORKDIR /usr
+RUN git clone --depth=1 ssh://git@git.f.smallsaas.cn:7207/repo/git/nft/nft.git --single-branch -b nft-oms oms
+RUN git clone --depth=1 ssh://git@git.f.smallsaas.cn:7207/repo/git/nft/nft.git --single-branch -b nft-artifact-uat src
+# RUN git clone --depth=1 ssh://git@49.119.119.4:/home/git/apps/nft.git --single-branch -b nft-oms oms
+# RUN git clone --depth=1 ssh://git@49.119.119.4:/home/git/apps/nft.git --single-branch -b nft-artifact-uat src
+######################################
+
+
+#cache-stage
+FROM allin-web:cache-artifact-1 as cache
+
+#builk-stage
+FROM maven:3.6-openjdk-11-slim AS build
+
+WORKDIR /root/.m2
+COPY --from=cache /root/.m2 /root/.m2
+
+## mvn package
+WORKDIR /usr/oms
+COPY --from=git /usr/oms/pom.xml  ./pom.xml
+COPY --from=git /usr/oms/src ./src
+RUN mvn -DskipStandalone=true install -Dmaven.test.skip=true
+
+WORKDIR /usr/src
+COPY --from=git /usr/src/pom.xml  ./pom.xml
+COPY --from=git /usr/src/src ./src
+RUN mvn -DskipStandalone=false package -Dmaven.test.skip=true
+
+
+#final-stage
+CMD ["sh", "-c", "/bin/cp /usr/src/target/*-standalone.jar /var/webapps"]

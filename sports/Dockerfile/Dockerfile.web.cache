@@ -1,0 +1,31 @@
+FROM zelejs/allin-web:git AS git
+
+RUN ssh-keyscan -p 7207 git.f.smallsaas.cn >> ~/.ssh/known_hosts
+
+WORKDIR /usr
+
+RUN git clone --depth=1 ssh://pi@git.f.smallsaas.cn:7207/repo/git/sports/sports-ai-api.git --single-branch -b web src
+
+RUN git clone --depth=1 ssh://pi@git.f.smallsaas.cn:7207/repo/git/zero-element-admin/zero-element-admin.git --single-branch -b V1.0 admin
+
+FROM daocloud.io/library/node:12 AS build
+
+WORKDIR /usr
+
+
+COPY --from=git /usr/admin ./admin
+
+WORKDIR /usr/admin
+
+
+COPY --from=git /usr/src/package.json ./package.json
+
+
+RUN npm config set registtry https://registry.npm.taobao.org
+
+# RUN npm install --force
+
+
+RUN npm install --force
+
+

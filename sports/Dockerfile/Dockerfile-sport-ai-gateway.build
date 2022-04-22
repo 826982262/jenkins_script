@@ -1,0 +1,44 @@
+FROM zelejs/allin-web:git AS git
+
+#RUN ssh-keyscan gitee.com >> ~/.ssh/known_hosts
+RUN ssh-keyscan -p 7207 git.f.smallsaas.cn >> ~/.ssh/known_hosts
+WORKDIR /usr
+
+#RUN git clone git@gitee.com:smallsaas/auto-api.git --single-branch -b master src
+RUN git clone --depth=1 ssh://git@git.f.smallsaas.cn:7207/repo/git/sports/sports-ai-gateway.git --single-branch -b master src
+
+FROM openresty/openresty
+WORKDIR /usr/src
+COPY --from=git /usr/src/gateway ./
+
+WORKDIR /usr/local
+# 更新阿里云的wheezy版本包源
+RUN echo "deb http://mirrors.aliyun.com/debian/ buster main non-free contrib" > /etc/apt/sources.list && \
+    echo "deb-src http://mirrors.aliyun.com/debian/ buster main non-free contrib" >> /etc/apt/sources.list  && \
+    echo "deb http://mirrors.aliyun.com/debian/ buster-updates main non-free contrib" >> /etc/apt/sources.list && \
+    echo "deb-src http://mirrors.aliyun.com/debian/ buster-updates main non-free contrib" >> /etc/apt/sources.list && \
+    echo "deb http://mirrors.aliyun.com/debian/ buster-backports main non-free contrib" >> /etc/apt/sources.list && \
+    echo "deb-src http://mirrors.aliyun.com/debian/ buster-backports main non-free contrib" >> /etc/apt/sources.list && \
+    echo "deb http://mirrors.aliyun.com/debian-security buster/updates main" >> /etc/apt/sources.list && \
+    echo "deb-src http://mirrors.aliyun.com/debian-security buster/updates main" >> /etc/apt/sources.list
+RUN apt-get update -y
+RUN echo "apt-get install -y build-essential libreadline-dev liblua5.3-dev lua5.3 unzip git vim curl wget"
+
+#WORKDIR /usr/src/gateway
+COPY --from=git /usr/src/packages ./
+RUN tar -zxvf luarocks-3.3.1.tar.gz
+
+WORKDIR /usr/local/luarocks-3.3.1
+RUN ./configure --with-lua-include=/usr/include
+RUN make
+RUN make install
+
+WORKDIR /usr/src/gateway
+
+RUN mkdir lua_modules
+# install lua-resty-jwt dependency
+RUN luarocks install --tree lua_modules lua-resty-jwt 
+
+CMD openresty -p `pwd` -c conf/nginx.conf -g 'daemon off;'
+
+EXPOSE 10000

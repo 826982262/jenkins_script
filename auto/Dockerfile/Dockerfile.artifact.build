@@ -1,0 +1,62 @@
+FROM zelejs/allin-web:git AS git
+
+RUN ssh-keyscan gitee.com >> ~/.ssh/known_hosts
+# RUN ssh-keyscan -p 7207 git.f.smallsaas.cn >> ~/.ssh/known_hosts
+WORKDIR /usr
+# RUN git clone ssh://pi@git.f.smallsaas.cn:7207/repo/git/auto-api/auto-api.git --single-branch -b master src
+RUN git clone git@gitee.com:smallsaas/auto-api.git --single-branch -b master src
+#RUN git clone git@github.com:smallsaas/auto-api.git --single-branch -b master src
+
+#RUN git clone ssh://git@git.f.smallsaas.cn:7207/repo/git/auto-api/auto-api.git src
+## m2 stage
+FROM zelejs/allin-web:alpine-m2 AS m2
+
+#builk-stage
+FROM maven:3.6-openjdk-11-slim AS build
+
+WORKDIR /root/m2
+COPY --from=m2 /root/.m2 /root/.m2
+## mvn package
+WORKDIR /usr/src/lc_low_auto_app
+COPY --from=git /usr/src/lc_low_auto_app/src ./src
+COPY --from=git /usr/src/lc_low_auto_app/pom.xml ./pom.xml
+
+RUN mvn -DskipStandalone=false install -Dmaven.test.skip=true
+
+WORKDIR /usr/src/lc_low_auto_module
+COPY --from=git /usr/src/lc_low_auto_module/src ./src
+COPY --from=git /usr/src/lc_low_auto_module/pom.xml ./pom.xml
+RUN mvn -DskipStandalone=false install -Dmaven.test.skip=true
+
+WORKDIR /usr/src/lc_low_auto_module_prop
+COPY --from=git /usr/src/lc_low_auto_module_prop/src ./src
+COPY --from=git /usr/src/lc_low_auto_module_prop/pom.xml ./pom.xml
+RUN mvn -DskipStandalone=false install -Dmaven.test.skip=true
+
+WORKDIR /usr/src/lc_low_auto_page
+COPY --from=git /usr/src/lc_low_auto_page/src ./src
+COPY --from=git /usr/src/lc_low_auto_page/pom.xml ./pom.xml
+RUN mvn -DskipStandalone=false install -Dmaven.test.skip=true
+
+WORKDIR /usr/src/lc_low_select_option
+COPY --from=git /usr/src/lc_low_select_option/src ./src
+COPY --from=git /usr/src/lc_low_select_option/pom.xml ./pom.xml
+RUN mvn -DskipStandalone=false install -Dmaven.test.skip=true
+
+
+
+WORKDIR /usr/src/lc_main
+COPY --from=git /usr/src/lc_main/src ./src
+COPY --from=git /usr/src/lc_main/pom.xml ./pom.xml
+RUN mvn -DskipStandalone=false install -Dmaven.test.skip=true
+
+WORKDIR /usr/src
+COPY --from=git /usr/src/pom.xml ./pom.xml
+RUN mvn -DskipStandalone=false package -Dmaven.test.skip=true
+
+
+
+
+
+#final-stage
+CMD ["sh", "-c", "/bin/cp /usr/src/lc_main/target/*-standalone.jar /var/webapps"]

@@ -1,0 +1,8 @@
+FROM daocloud.io/library/node:12 as build
+
+WORKDIR /usr/src
+ADD ./json-mock/ ./
+
+RUN npm config set registry https://registry.npm.taobao.org
+RUN npm install
+CMD [ "npm", "run", "start" ]

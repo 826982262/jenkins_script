@@ -1,0 +1,46 @@
+FROM zelejs/allin-web:git AS git
+
+
+# RUN ssh-keyscan 192.168.3.239 >> ~/.ssh/known_hosts
+RUN ssh-keyscan -p 7207 git.f.smallsaas.cn >> ~/.ssh/known_hosts
+
+WORKDIR /usr
+
+# RUN git clone ssh://git@192.168.3.239/home/git/apps/nft.git --single-branch -b authorize src
+RUN git clone ssh://pi@git.f.smallsaas.cn:7207/repo/git/nft/nft-web.git --single-branch -b authorize src
+
+
+#cache-stage
+# FROM allin-web:cache-install-npm as cache
+
+#builk-stage
+# FROM daocloud.io/library/node:12 AS build
+# COPY --from=cache /root/node_modules  ./node_modules
+
+FROM allin-web:cache-install-npm as build
+
+## mvn package
+WORKDIR /usr/src
+
+# RUN --mount=type=cache,id=m2_cache,target=/root/.m2,rw mvn dependency:go-offline -Dmaven.main.skip=true -Dmaven.test.skip=true
+COPY --from=git /usr/src/package.json  ./package.json
+COPY --from=git /usr/src/webpack.config.js  ./webpack.config.js
+COPY --from=git /usr/src/src ./src
+COPY --from=git /usr/src/public ./public
+COPY --from=git /usr/src/init.js ./init.js
+COPY --from=git /usr/src/.umirc.js ./.umirc.js
+COPY --from=git /usr/src/.prettierrc ./.prettierrc
+
+## build vs. buildA
+# RUN rm -rf node_modules/zero-element-antd
+# RUN npm install git://github.com/kequandian/zero-element-antd.git#master
+# RUN npm i git://github.com/kequandian/zero-element-plugins.git#master
+# RUN npm i  git+https://gitee.com/smallsaas/zero-element-antd.git
+
+RUN npm run build
+# RUN npm run buildA
+
+WORKDIR /var/dist
+
+CMD ["sh", "-c", "/bin/cp -r /usr/src/dist/* /var/dist"]
+

@@ -1,0 +1,65 @@
+2022-04-20 00:18:56,687 [ERROR] [wisp-task-schedule-4] c.j.m.n.o.configuration.scheduler.WispSchedulerErrorHandler [WispSchedulerErrorHandler.java : 10] 精灵匹配异步任务异常:
+com.jfeat.crud.base.exception.BusinessException: 玩家[playerId:1527]资源信息不存在
+	at com.jfeat.module.nft.oms.services.domain.service.impl.PlayerWalletServiceImpl.lambda$queryByPlayerId$0(PlayerWalletServiceImpl.java:46)
+	at java.base/java.util.Optional.orElseThrow(Unknown Source)
+	at com.jfeat.module.nft.oms.services.domain.service.impl.PlayerWalletServiceImpl.queryByPlayerId(PlayerWalletServiceImpl.java:46)
+	at com.jfeat.module.nft.oms.services.domain.service.impl.PlayerWalletServiceImpl$$FastClassBySpringCGLIB$$4a70298e.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:669)
+	at com.jfeat.module.nft.oms.services.domain.service.impl.PlayerWalletServiceImpl$$EnhancerBySpringCGLIB$$54ff83fa.queryByPlayerId(<generated>)
+	at jdk.internal.reflect.GeneratedMethodAccessor371.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:333)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:207)
+	at com.sun.proxy.$Proxy152.queryByPlayerId(Unknown Source)
+	at com.jfeat.module.nft.oms.services.domain.service.impl.PlayerOverModelServiceImpl.calculatePlayerLevel(PlayerOverModelServiceImpl.java:397)
+	at com.jfeat.module.nft.oms.services.domain.service.impl.PlayerOverModelServiceImpl.updateAllPlayerLevel(PlayerOverModelServiceImpl.java:227)
+	at com.jfeat.module.nft.oms.services.domain.service.impl.PlayerOverModelServiceImpl$$FastClassBySpringCGLIB$$7791b26e.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:669)
+	at com.jfeat.module.nft.oms.services.domain.service.impl.PlayerOverModelServiceImpl$$EnhancerBySpringCGLIB$$61b0aa9a.updateAllPlayerLevel(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:333)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:207)
+	at com.sun.proxy.$Proxy151.updateAllPlayerLevel(Unknown Source)
+	at com.jfeat.module.nft.oms.services.domain.event.listener.MyScheduledTask.updateAllPlayerLevel(MyScheduledTask.java:36)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:65)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:81)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2022-04-20 00:30:01,139 [ERROR] [wisp-task-schedule-5] c.j.module.nft.oms.services.domain.event.WispUpgradeTrigger [WispUpgradeTrigger.java : 27] 每日精灵升级存在异常，请确认是否存在同级多只同类别精灵的情况:[玩家[playerId:1604]资源信息不存在]
+2022-04-20 11:00:00,423 [WARN] [wisp-task-schedule-7] com.jfeat.crud.plus.impl.CRUDServiceOnlyImpl [MarketingSessionOverModelServiceImpl.java : 109] 定时任务卡顿测试log1
+2022-04-20 11:00:00,426 [WARN] [wisp-task-schedule-7] com.jfeat.crud.plus.impl.CRUDServiceOnlyImpl [MarketingSessionOverModelServiceImpl.java : 112] 定时任务卡顿测试log2
+2022-04-20 11:00:00,669 [WARN] [wisp-task-schedule-7] com.jfeat.crud.plus.impl.CRUDServiceOnlyImpl [MarketingSessionOverModelServiceImpl.java : 114] 定时任务卡顿测试log3
+2022-04-20 11:00:00,754 [WARN] [wisp-task-schedule-7] com.jfeat.crud.plus.impl.CRUDServiceOnlyImpl [MarketingSessionOverModelServiceImpl.java : 116] 定时任务卡顿测试log4
+2022-04-20 11:00:27,296 [WARN] [wisp-task-schedule-7] com.jfeat.crud.plus.impl.CRUDServiceOnlyImpl [MarketingSessionOverModelServiceImpl.java : 118] 定时任务卡顿测试log5
+2022-04-20 11:35:26,231 [WARN] [main] io.undertow.websockets.jsr [Bootstrap.java : 67] UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used
+2022-04-20 11:35:26,237 [WARN] [main] io.undertow.websockets.jsr [Bootstrap.java : 76] UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2022-04-20 11:35:37,421 [ERROR] [main] com.baomidou.mybatisplus.core.MybatisConfiguration [MybatisConfiguration.java : 84] mapper[com.jfeat.module.nft.oms.services.domain.dao.QueryWispInstanceDao.queryPlayerWispInstanceByStage] is ignored, because it exists, maybe from xml file
+2022-04-20 11:56:22,485 [WARN] [main] io.undertow.websockets.jsr [Bootstrap.java : 67] UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used
+2022-04-20 11:56:22,492 [WARN] [main] io.undertow.websockets.jsr [Bootstrap.java : 76] UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2022-04-20 11:56:34,083 [ERROR] [main] com.baomidou.mybatisplus.core.MybatisConfiguration [MybatisConfiguration.java : 84] mapper[com.jfeat.module.nft.oms.services.domain.dao.QueryWispInstanceDao.queryPlayerWispInstanceByStage] is ignored, because it exists, maybe from xml file
+2022-04-20 12:00:00,375 [WARN] [wisp-task-schedule-1] com.jfeat.crud.plus.impl.CRUDServiceOnlyImpl [MarketingSessionOverModelServiceImpl.java : 109] 定时任务卡顿测试log1
+2022-04-20 12:00:00,378 [WARN] [wisp-task-schedule-1] com.jfeat.crud.plus.impl.CRUDServiceOnlyImpl [MarketingSessionOverModelServiceImpl.java : 112] 定时任务卡顿测试log2
+2022-04-20 12:00:00,612 [WARN] [wisp-task-schedule-1] com.jfeat.crud.plus.impl.CRUDServiceOnlyImpl [MarketingSessionOverModelServiceImpl.java : 114] 定时任务卡顿测试log3
+2022-04-20 12:00:00,712 [WARN] [wisp-task-schedule-1] com.jfeat.crud.plus.impl.CRUDServiceOnlyImpl [MarketingSessionOverModelServiceImpl.java : 116] 定时任务卡顿测试log4
+2022-04-20 12:01:36,145 [WARN] [wisp-task-schedule-1] com.jfeat.crud.plus.impl.CRUDServiceOnlyImpl [MarketingSessionOverModelServiceImpl.java : 118] 定时任务卡顿测试log5
+2022-04-20 13:00:00,374 [WARN] [wisp-task-schedule-3] com.jfeat.crud.plus.impl.CRUDServiceOnlyImpl [MarketingSessionOverModelServiceImpl.java : 109] 定时任务卡顿测试log1
+2022-04-20 13:00:00,376 [WARN] [wisp-task-schedule-3] com.jfeat.crud.plus.impl.CRUDServiceOnlyImpl [MarketingSessionOverModelServiceImpl.java : 112] 定时任务卡顿测试log2
+2022-04-20 13:00:00,626 [WARN] [wisp-task-schedule-3] com.jfeat.crud.plus.impl.CRUDServiceOnlyImpl [MarketingSessionOverModelServiceImpl.java : 114] 定时任务卡顿测试log3
+2022-04-20 13:00:00,712 [WARN] [wisp-task-schedule-3] com.jfeat.crud.plus.impl.CRUDServiceOnlyImpl [MarketingSessionOverModelServiceImpl.java : 116] 定时任务卡顿测试log4
+2022-04-20 13:00:12,944 [WARN] [wisp-task-schedule-3] com.jfeat.crud.plus.impl.CRUDServiceOnlyImpl [MarketingSessionOverModelServiceImpl.java : 118] 定时任务卡顿测试log5
+2022-04-20 14:00:16,811 [WARN] [XNIO-2 task-12] c.j.a.u.s.services.domain.service.impl.SysUserServiceImpl [SysUserServiceImpl.java : 815] login failed: incorrect credentials Submitted credentials for token [com.jfeat.am.uaas.system.core.shiro.OrgUsernamePasswordToken@7dbbf58] did not match the expected credentials.

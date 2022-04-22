@@ -1,0 +1,46 @@
+version: "3.4"
+services:
+  api:
+    image: adoptopenjdk:11-jre-hotspot
+    working_dir: /webapps
+    volumes: 
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+      - ./api:/webapps
+    # ports:
+    #  - 8084:8080
+    #  - 8085:5005
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "5m"
+    environment:
+      TZ: Asia/Shanghai
+      JAVA_OPTS: "$JAVA_OPTS -agentlib:jdwp=transport=dt_socket,address=*:5005,server=y,suspend=n"
+    command:
+      - /bin/sh
+      - -c
+      - |
+        java -jar *.jar --spring.profiles.active=uat --server.port=8080
+    #    java "-agentlib:jdwp=transport=dt_socket,address=*:5005,server=y,suspend=n" -jar *.jar --spring.profiles.active=uat --server.port=8080
+
+  web:
+    image: nginx:stable
+    privileged: true
+    restart: always
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "1k"  
+    volumes: 
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+      # - ./nginx.conf:/etc/nginx/nginx.conf
+      # - ./mysql-expose.mod:/etc/nginx/conf.d/mysql-expose.mod
+      - ./gateway.conf/:/etc/nginx/conf.d
+      - ./images:/usr/share/nginx/html/images
+      - ./attachments:/usr/share/nginx/html/attachments
+      - ./dist:/usr/share/nginx/html
+    ports:
+      - 8087:80
+      - 8088:81

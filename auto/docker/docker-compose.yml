@@ -1,0 +1,25 @@
+version: "3.4"
+services:
+  api:
+    image: adoptopenjdk:11-jre-hotspot
+    working_dir: /webapps
+    volumes: 
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+      - ./api:/webapps
+    ports:
+      - 8084:8080
+    #   - 8085:5005
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "5m"
+    environment:
+      TZ: Asia/Shanghai
+      #JAVA_OPTS: "$JAVA_OPTS -agentlib:jdwp=transport=dt_socket,address=*:5005,server=y,suspend=n"
+    command:
+      - /bin/sh
+      - -c
+      - |
+        java -jar *.jar --spring.profiles.active=uat --server.port=8080
+#       java "-agentlib:jdwp=transport=dt_socket,address=*:5005,server=y,suspend=n" -jar *.jar --spring.profiles.active=uat --server.port=8080

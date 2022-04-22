@@ -1,0 +1,26 @@
+FROM zelejs/allin-web:git AS git
+
+RUN ssh-keyscan -p 7207 git.f.smallsaas.cn >> ~/.ssh/known_hosts
+
+WORKDIR /usr
+
+RUN git clone ssh://pi@git.f.smallsaas.cn:7207/repo/git/gmic/gmic-cad-web-pages.git --single-branch -b master src
+
+
+FROM allin-web:cache-web-1 as build
+
+WORKDIR /usr/src
+COPY --from=git /usr/src/web/src ./web
+
+RUN cp -r ./pages /usr/src/web/src
+
+WORKDIR /usr/src/web
+#COPY --from=git /usr/src/web/package.json ./package.json
+#COPY --from=git /usr/src/web/init.js ./init.js
+
+#RUN npm install 
+RUN npm run build 
+
+
+#final-stage
+CMD ["sh", "-c", "/bin/cp -r /usr/src/web/dist/* /var/dist"]

@@ -1,0 +1,1 @@
+docker build -f Dockerfile.sports-ai-api.cache . --force-rm -t sports-ai-api:cache-artifact-1 --no-cache

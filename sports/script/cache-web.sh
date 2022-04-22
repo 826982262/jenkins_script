@@ -1,0 +1,1 @@
+docker build -f Dockerfile.web.cache . --force-rm --no-cache -t allin-sports-web:cache-web-1

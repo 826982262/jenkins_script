@@ -1,0 +1,32 @@
+FROM zelejs/allin-web:git AS git
+
+
+RUN ssh-keyscan -p 7207 git.f.smallsaas.cn >> ~/.ssh/known_hosts
+RUN ssh-keyscan gitee.com >> ~/.ssh/known_hosts
+WORKDIR /usr
+
+RUN git clone --depth=1 ssh://pi@git.f.smallsaas.cn:7207/repo/git/sports/sports-ai-api.git --single-branch -b web src
+#RUN git clone git@gitee.com:smallsaas/zero-element-admin.git admin
+FROM allin-sports-web:cache-web-1 as build
+
+WORKDIR /usr
+COPY --from=git /usr/src/* ./
+COPY --from=git /usr/src/public ./public
+COPY --from=git /usr/src/pages ./pages
+COPY --from=git /usr/src/package.json ./package.json
+COPY --from=git /usr/src/src ./src
+COPY --from=git /usr/src/move.sh ./move.sh
+RUN sh ./move.sh
+
+# COPY --from=git /usr/src/admin ./admin
+WORKDIR /usr/admin
+RUN npm i zero-element-antd
+# RUN --mount=type=cache,id=node_modules_cache,target=/usr/admin/node_modules,rw npm install 
+# RUN --mount=type=cache,id=node_modules_cache,target=/usr/admin/node_modules,rw npm install
+# RUN --mount=type=cache,id=node_modules_cache,target=/usr/admin/node_modules,rw npm run build 
+RUN npm install --save layout-flex
+
+RUN npm run build 
+
+#final-stage
+CMD ["sh", "-c", "/bin/cp -r /usr/admin/dist/* /var/dist"]

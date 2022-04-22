@@ -1,0 +1,4417 @@
+{
+  "posts": [],
+  "user": {},
+  "forms": [
+    {
+      "id": 1,
+      "form": {
+        "version": "1",
+        "name": "navPage",
+        "title": "导航页",
+        "pageStyle": {},
+        "loadApi": "",
+        "response": {
+          "data": "data"
+        },
+        "request": {},
+        "moduleContainer": {},
+        "modules": [
+          {
+            "type": "navlist",
+            "name": "导航列表",
+            "key": "d4a555sd-hf22-qqds-8412-16234da445885",
+            "container": {
+              "grid-template-columns": "repeat(2, 50%)"
+            }
+          }
+        ],
+        "moduleData": {
+          "d4a555sd-hf22-qqds-8412-16234da445885": {
+            "itemModule": {
+              "name": "subTitleCardItem"
+            },
+            "navList": [
+              {
+                "svg": "autoForm",
+                "title": "自动表单",
+                "subTitle": "可用表单组件示例",
+                "nav": "/pages/autoForm/index",
+                "container": {}
+              },
+              {
+                "svg": "autoList",
+                "title": "自动列表",
+                "subTitle": "自动列表示例",
+                "nav": "/pages/autoList/autoList",
+                "container": {}
+              },
+              {
+                "svg": "autoPage",
+                "title": "页面组件",
+                "subTitle": "页面组件示例",
+                "nav": "/pages/defaultPage/page?id=55",
+                "container": {}
+              },
+              {
+                "svg": "",
+                "title": "精灵市场",
+                "subTitle": "精灵市场",
+                "nav": "/pages/defaultPage/page?id=55555",
+                "container": {}
+              },
+              {
+                "svg": "",
+                "title": "个人资料",
+                "subTitle": "个人资料",
+                "nav": "/pages/defaultPage/page?id=66666",
+                "container": {}
+              },
+              {
+                "svg": "",
+                "title": "个人资料",
+                "subTitle": "个人资料",
+                "nav": "/pages/defaultPage/page?id=77777",
+                "container": {}
+              },
+              {
+                "svg": "",
+                "title": "个人中心",
+                "subTitle": "个人中心",
+                "nav": "/pages/defaultPage/page?id=66666",
+                "container": {}
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": 1019,
+      "form": {
+        "fields": [
+          {
+            "__config__": {
+              "label": "",
+              "labelWidth": null,
+              "showLabel": true,
+              "tag": "el-input",
+              "tagIcon": "input",
+              "defaultValue": "输入型组件",
+              "required": false,
+              "layout": "colFormItem",
+              "regList": [],
+              "formId": 101,
+              "renderKey": 1621415022993
+            },
+            "disabled": true,
+            "__vModel__": "Inputtitle"
+          },
+          {
+            "__config__": {
+              "label": "单行文本",
+              "labelWidth": null,
+              "showLabel": true,
+              "tag": "el-input",
+              "tagIcon": "input",
+              "defaultValue": "这是单行文本",
+              "required": true,
+              "layout": "colFormItem",
+              "regList": [],
+              "formId": 101,
+              "renderKey": 1621415022993
+            },
+            "__slot__": {
+              "prepend": "",
+              "append": ""
+            },
+            "placeholder": "请输入单行文本",
+            "style": {
+              "width": "100%"
+            },
+            "clearable": true,
+            "prefix-icon": "",
+            "suffix-icon": "",
+            "maxlength": null,
+            "show-word-limit": false,
+            "readonly": false,
+            "disabled": false,
+            "__vModel__": "input"
+          },
+          {
+            "__config__": {
+              "label": "多行文本",
+              "autosize": 5,
+              "showLabel": true,
+              "labelWidth": null,
+              "defaultValue": "这是多行文本",
+              "tag": "el-input",
+              "tagIcon": "textarea",
+              "layout": "colFormItem",
+              "required": true,
+              "regList": [],
+              "formId": 103,
+              "renderKey": 1621415255861
+            },
+            "readonly": false,
+            "clearable": true,
+            "maxlength": "100",
+            "placeholder": "请输入多行文本",
+            "__vModel__": "textarea"
+          },
+          {
+            "__config__": {
+              "label": "密码",
+              "showLabel": true,
+              "labelWidth": null,
+              "tag": "el-input",
+              "tagIcon": "password",
+              "defaultValue": "123456",
+              "layout": "colFormItem",
+              "required": true,
+              "regList": [
+                {
+                  "pattern": "/0-9/",
+                  "message": "密码只能是纯数字"
+                }
+              ],
+              "formId": 102,
+              "renderKey": 1621415025493
+            },
+            "__slot__": {
+              "prepend": "",
+              "append": ""
+            },
+            "placeholder": "请输入密码",
+            "show-password": true,
+            "style": {
+              "width": "100%"
+            },
+            "clearable": true,
+            "prefix-icon": "",
+            "suffix-icon": "",
+            "maxlength": null,
+            "show-word-limit": false,
+            "readonly": false,
+            "disabled": false,
+            "__vModel__": "InputPassword"
+          },
+          {
+            "__config__": {
+              "label": "计数器",
+              "showLabel": true,
+              "labelWidth": null,
+              "defaultValue": 5,
+              "tag": "el-input-number",
+              "tagIcon": "number",
+              "layout": "colFormItem",
+              "required": true,
+              "regList": [],
+              "formId": 103,
+              "renderKey": 1621415255861
+            },
+            "placeholder": "多行文本",
+            "__vModel__": "number"
+          },
+          {
+            "__config__": {
+              "label": "",
+              "labelWidth": null,
+              "showLabel": true,
+              "tag": "el-input",
+              "tagIcon": "input",
+              "defaultValue": "选择型组件",
+              "required": false,
+              "layout": "colFormItem",
+              "regList": [],
+              "formId": 101,
+              "renderKey": 1621415022993
+            },
+            "disabled": true,
+            "__vModel__": "Selecttitle"
+          },
+          {
+            "__config__": {
+              "label": "下拉选择",
+              "showLabel": true,
+              "defaultValue": 1000,
+              "labelWidth": null,
+              "tag": "el-select",
+              "tagIcon": "select",
+              "layout": "colFormItem",
+              "required": true,
+              "regList": [],
+              "formId": 103,
+              "renderKey": 1621415255861
+            },
+            "__slot__": {
+              "options": [
+                {
+                  "label": "请选择选项",
+                  "value": 1000
+                },
+                {
+                  "label": "选项1",
+                  "value": 1
+                },
+                {
+                  "label": "选项2",
+                  "value": 2
+                }
+              ]
+            },
+            "placeholder": "请选择选项",
+            "style": {
+              "width": "100%"
+            },
+            "clearable": true,
+            "disabled": false,
+            "filterable": false,
+            "multiple": false,
+            "__vModel__": "select"
+          },
+          {
+            "__config__": {
+              "label": "级联选择(不支持)",
+              "showLabel": true,
+              "labelWidth": null,
+              "tag": "el-cascader",
+              "tagIcon": "cascader",
+              "layout": "colFormItem",
+              "required": true,
+              "regList": [],
+              "formId": 103,
+              "renderKey": 1621415255861
+            },
+            "__slot__": {
+              "options": [
+                {
+                  "label": "选项1",
+                  "value": 1
+                },
+                {
+                  "label": "选项2",
+                  "value": 2
+                }
+              ]
+            },
+            "placeholder": "请选择选项",
+            "style": {
+              "width": "100%"
+            },
+            "clearable": true,
+            "disabled": false,
+            "filterable": false,
+            "multiple": false,
+            "__vModel__": "select"
+          },
+          {
+            "__config__": {
+              "label": "单选框组",
+              "labelWidth": null,
+              "showLabel": true,
+              "tag": "el-radio-group",
+              "tagIcon": "radio",
+              "layout": "colFormItem",
+              "optionType": "default",
+              "regList": [],
+              "required": false,
+              "border": false,
+              "formId": 104,
+              "renderKey": 1621415304568
+            },
+            "__slot__": {
+              "options": [
+                {
+                  "label": "选项一",
+                  "value": 1
+                },
+                {
+                  "label": "选项二",
+                  "value": 2
+                }
+              ]
+            },
+            "style": {},
+            "size": "medium",
+            "disabled": false,
+            "__vModel__": "field104"
+          },
+          {
+            "__config__": {
+              "label": "多选框组",
+              "tag": "el-checkbox-group",
+              "tagIcon": "checkbox",
+              "defaultValue": [],
+              "showLabel": true,
+              "labelWidth": null,
+              "layout": "colFormItem",
+              "optionType": "default",
+              "required": false,
+              "regList": [],
+              "border": false,
+              "formId": 105,
+              "renderKey": 1621415342008
+            },
+            "__slot__": {
+              "options": [
+                {
+                  "label": "选项一",
+                  "value": 1
+                },
+                {
+                  "label": "选项二",
+                  "value": 2
+                },
+                {
+                  "label": "选项三",
+                  "value": 3
+                }
+              ]
+            },
+            "style": {},
+            "size": "medium",
+            "disabled": false,
+            "__vModel__": "field105"
+          },
+          {
+            "__config__": {
+              "label": "开关",
+              "tag": "el-switch",
+              "tagIcon": "switch",
+              "defaultValue": false,
+              "showLabel": true,
+              "labelWidth": null,
+              "layout": "colFormItem",
+              "required": true,
+              "regList": [],
+              "formId": 106,
+              "renderKey": 1621415361475
+            },
+            "style": {},
+            "disabled": false,
+            "active-text": "",
+            "inactive-text": "",
+            "active-color": null,
+            "inactive-color": null,
+            "active-value": true,
+            "inactive-value": false,
+            "__vModel__": "field106"
+          },
+          {
+            "__config__": {
+              "label": "日期选择",
+              "tag": "el-slider",
+              "tagIcon": "slider",
+              "defaultValue": 50,
+              "showLabel": true,
+              "labelWidth": null,
+              "layout": "colFormItem",
+              "required": true,
+              "regList": [],
+              "formId": 109,
+              "renderKey": 1621415374360
+            },
+            "placeholder": "请选择滑块",
+            "type": "date",
+            "style": {
+              "width": "100%"
+            },
+            "disabled": false,
+            "clearable": true,
+            "format": "yyyy-MM-dd",
+            "value-format": "yyyy-MM-dd",
+            "readonly": false,
+            "__vModel__": "slider"
+          },
+          {
+            "__config__": {
+              "label": "时间选择",
+              "tag": "el-date-picker",
+              "tagIcon": "time",
+              "defaultValue": null,
+              "showLabel": true,
+              "labelWidth": null,
+              "layout": "colFormItem",
+              "required": true,
+              "regList": [],
+              "formId": 109,
+              "renderKey": 1621415374360
+            },
+            "placeholder": "请选择时间选择",
+            "type": "date",
+            "style": {
+              "width": "100%"
+            },
+            "disabled": false,
+            "clearable": true,
+            "readonly": false,
+            "__vModel__": "el-time-picker-time"
+          },
+          {
+            "__config__": {
+              "label": "日期选择",
+              "tag": "el-date-picker",
+              "tagIcon": "date",
+              "defaultValue": null,
+              "showLabel": true,
+              "labelWidth": null,
+              "layout": "colFormItem",
+              "required": true,
+              "regList": [],
+              "formId": 109,
+              "renderKey": 1621415374360
+            },
+            "placeholder": "请选择日期选择",
+            "type": "date",
+            "style": {
+              "width": "100%"
+            },
+            "disabled": false,
+            "clearable": true,
+            "format": "yyyy-MM-dd",
+            "value-format": "yyyy-MM-dd",
+            "readonly": false,
+            "__vModel__": "field109"
+          },
+          {
+            "__config__": {
+              "label": "评分",
+              "showLabel": true,
+              "labelWidth": null,
+              "defaultValue": 3,
+              "tag": "el-rate",
+              "tagIcon": "rate",
+              "layout": "colFormItem",
+              "required": true,
+              "regList": [],
+              "formId": 103,
+              "renderKey": 1621415255861
+            },
+            "placeholder": "评分",
+            "__vModel__": "rate"
+          },
+          {
+            "__config__": {
+              "label": "颜色选择(不支持)",
+              "showLabel": true,
+              "labelWidth": null,
+              "defaultValue": "#1231ab",
+              "tag": "el-color-picker",
+              "tagIcon": "color",
+              "layout": "colFormItem",
+              "required": true,
+              "regList": [],
+              "formId": 103,
+              "renderKey": 1621415255861
+            },
+            "placeholder": "颜色选择",
+            "__vModel__": "rate"
+          },
+          {
+            "__config__": {
+              "label": "上传",
+              "showLabel": true,
+              "labelWidth": null,
+              "defaultValue": "",
+              "tag": "el-upload",
+              "tagIcon": "upload",
+              "layout": "colFormItem",
+              "required": true,
+              "regList": [],
+              "formId": 103,
+              "renderKey": 1621415255861
+            },
+            "placeholder": "上传",
+            "__vModel__": "upload"
+          },
+          {
+            "__config__": {
+              "layout": "rowFormItem",
+              "tagIcon": "row",
+              "layoutTree": true,
+              "formId": 112,
+              "renderKey": 1621415404383,
+              "componentName": "rowFormItem",
+              "children": [
+                {
+                  "__config__": {
+                    "label": "单行文本",
+                    "labelWidth": null,
+                    "showLabel": true,
+                    "tag": "el-input",
+                    "tagIcon": "input",
+                    "required": true,
+                    "layout": "colFormItem",
+                    "regList": [],
+                    "formId": 113,
+                    "renderKey": 1621415432107
+                  },
+                  "__slot__": {
+                    "prepend": "",
+                    "append": ""
+                  },
+                  "placeholder": "请输入单行文本",
+                  "style": {
+                    "width": "100%"
+                  },
+                  "clearable": true,
+                  "prefix-icon": "",
+                  "suffix-icon": "",
+                  "maxlength": null,
+                  "show-word-limit": false,
+                  "readonly": false,
+                  "disabled": false,
+                  "__vModel__": "field113"
+                },
+                {
+                  "__config__": {
+                    "label": "多行文本",
+                    "labelWidth": null,
+                    "showLabel": true,
+                    "tag": "el-input",
+                    "tagIcon": "textarea",
+                    "required": true,
+                    "layout": "colFormItem",
+                    "regList": [],
+                    "formId": 114,
+                    "renderKey": 1621415438457
+                  },
+                  "type": "textarea",
+                  "placeholder": "请输入多行文本",
+                  "autosize": {
+                    "minRows": 4,
+                    "maxRows": 4
+                  },
+                  "style": {
+                    "width": "100%"
+                  },
+                  "maxlength": null,
+                  "show-word-limit": false,
+                  "readonly": false,
+                  "disabled": false,
+                  "__vModel__": "field114"
+                }
+              ]
+            },
+            "type": "default",
+            "justify": "start",
+            "align": "top"
+          }
+        ],
+        "formRef": "elForm",
+        "formModel": "formData",
+        "size": "medium",
+        "labelPosition": "left",
+        "labelWidth": 100,
+        "formRules": "rules",
+        "gutter": 0,
+        "disabled": false,
+        "formBtns": true,
+        "unFocusedComponentBorder": false
+      }
+    },
+    {
+      "id": 53125,
+      "form": {
+        "version": "1",
+        "name": "canUseH5FormComponent",
+        "title": "可用的H5表单组件",
+        "pageStyle": {},
+        "request": {},
+        "response": {
+          "data": "data"
+        },
+        "container": {},
+        "modules": [
+          {
+            "type": "autoform",
+            "key": "96afd71a-c8d5-11eb-aca5-0800271e55b7",
+            "name": "",
+            "container": {}
+          },
+          {
+            "type": "autoform",
+            "key": "435154156",
+            "name": "",
+            "container": {}
+          }
+        ],
+        "moduleData": {
+          "435154156": {
+            "fields": [
+              {
+                "__config__": {
+                  "layout": "rowFormItem",
+                  "tagIcon": "row",
+                  "layoutTree": true,
+                  "formId": 112,
+                  "renderKey": 1621415404383,
+                  "componentName": "标题",
+                  "children": [
+                    {
+                      "__config__": {
+                        "label": "单行文本",
+                        "labelWidth": null,
+                        "showLabel": true,
+                        "tag": "el-input",
+                        "tagIcon": "input",
+                        "required": true,
+                        "layout": "colFormItem",
+                        "regList": [],
+                        "formId": 113,
+                        "renderKey": 1621415432107
+                      },
+                      "__slot__": {
+                        "prepend": "",
+                        "append": ""
+                      },
+                      "placeholder": "请输入单行文本",
+                      "style": {
+                        "width": "100%"
+                      },
+                      "clearable": true,
+                      "prefix-icon": "",
+                      "suffix-icon": "",
+                      "maxlength": null,
+                      "show-word-limit": false,
+                      "readonly": false,
+                      "disabled": false,
+                      "__vModel__": "field113"
+                    },
+                    {
+                      "__config__": {
+                        "label": "多行文本",
+                        "labelWidth": null,
+                        "showLabel": true,
+                        "tag": "el-input",
+                        "tagIcon": "textarea",
+                        "required": true,
+                        "layout": "colFormItem",
+                        "regList": [],
+                        "formId": 114,
+                        "renderKey": 1621415438457
+                      },
+                      "type": "textarea",
+                      "placeholder": "请输入多行文本",
+                      "autosize": {
+                        "minRows": 4,
+                        "maxRows": 4
+                      },
+                      "style": {
+                        "width": "100%"
+                      },
+                      "maxlength": null,
+                      "show-word-limit": false,
+                      "readonly": false,
+                      "disabled": false,
+                      "__vModel__": "field114"
+                    }
+                  ]
+                },
+                "type": "default",
+                "justify": "start",
+                "align": "top"
+              }
+            ],
+            "formRef": "elForm",
+            "formModel": "formData",
+            "size": "medium",
+            "labelPosition": "left",
+            "labelWidth": 100,
+            "formRules": "rules",
+            "gutter": 0,
+            "disabled": false,
+            "formBtns": true,
+            "unFocusedComponentBorder": false,
+            "loadApi": "/data?id=10"
+          },
+          "96afd71a-c8d5-11eb-aca5-0800271e55b7": {
+            "fields": [
+              {
+                "__config__": {
+                  "label": "账号",
+                  "labelWidth": null,
+                  "showLabel": true,
+                  "tag": "el-input",
+                  "tagIcon": "input",
+                  "defaultValue": "admin",
+                  "required": true,
+                  "layout": "colFormItem",
+                  "regList": [],
+                  "formId": 101,
+                  "renderKey": 1621415022993
+                },
+                "__slot__": {
+                  "prepend": "",
+                  "append": ""
+                },
+                "placeholder": "请输入账号",
+                "style": {
+                  "width": "100%"
+                },
+                "clearable": true,
+                "prefix-icon": "",
+                "suffix-icon": "",
+                "maxlength": null,
+                "show-word-limit": false,
+                "readonly": false,
+                "disabled": false,
+                "__vModel__": "account"
+              },
+              {
+                "__config__": {
+                  "label": "密码",
+                  "showLabel": true,
+                  "labelWidth": null,
+                  "tag": "el-input",
+                  "tagIcon": "password",
+                  "layout": "colFormItem",
+                  "required": true,
+                  "regList": [
+                    {
+                      "pattern": "/0-9/",
+                      "message": "密码只能是纯数字"
+                    }
+                  ],
+                  "formId": 102,
+                  "renderKey": 1621415025493
+                },
+                "__slot__": {
+                  "prepend": "",
+                  "append": ""
+                },
+                "placeholder": "请输入密码",
+                "show-password": true,
+                "style": {
+                  "width": "100%"
+                },
+                "clearable": true,
+                "prefix-icon": "",
+                "suffix-icon": "",
+                "maxlength": null,
+                "show-word-limit": false,
+                "readonly": false,
+                "disabled": false,
+                "__vModel__": "password"
+              },
+              {
+                "__config__": {
+                  "label": "性别",
+                  "showLabel": true,
+                  "labelWidth": null,
+                  "tag": "el-select",
+                  "tagIcon": "select",
+                  "layout": "colFormItem",
+                  "required": true,
+                  "regList": [],
+                  "formId": 103,
+                  "renderKey": 1621415255861
+                },
+                "__slot__": {
+                  "options": [
+                    {
+                      "label": "男",
+                      "value": 1
+                    },
+                    {
+                      "label": "女",
+                      "value": 2
+                    }
+                  ]
+                },
+                "placeholder": "请选择性别",
+                "style": {
+                  "width": "100%"
+                },
+                "clearable": true,
+                "disabled": false,
+                "filterable": false,
+                "multiple": false,
+                "__vModel__": "sex"
+              },
+              {
+                "__config__": {
+                  "label": "开关",
+                  "tag": "el-switch",
+                  "tagIcon": "switch",
+                  "defaultValue": false,
+                  "showLabel": true,
+                  "labelWidth": null,
+                  "layout": "colFormItem",
+                  "required": true,
+                  "regList": [],
+                  "formId": 106,
+                  "renderKey": 1621415361475
+                },
+                "style": {},
+                "disabled": false,
+                "active-text": "",
+                "inactive-text": "",
+                "active-color": null,
+                "inactive-color": null,
+                "active-value": true,
+                "inactive-value": false,
+                "__vModel__": "field106"
+              },
+              {
+                "__config__": {
+                  "label": "日期选择",
+                  "tag": "el-date-picker",
+                  "tagIcon": "date",
+                  "defaultValue": null,
+                  "showLabel": true,
+                  "labelWidth": null,
+                  "layout": "colFormItem",
+                  "required": true,
+                  "regList": [],
+                  "formId": 109,
+                  "renderKey": 1621415374360
+                },
+                "placeholder": "请选择日期选择",
+                "type": "date",
+                "style": {
+                  "width": "100%"
+                },
+                "disabled": false,
+                "clearable": true,
+                "format": "yyyy-MM-dd",
+                "value-format": "yyyy-MM-dd",
+                "readonly": false,
+                "__vModel__": "field109"
+              },
+              {
+                "__config__": {
+                  "layout": "rowFormItem",
+                  "tagIcon": "row",
+                  "layoutTree": true,
+                  "formId": 112,
+                  "renderKey": 1621415404383,
+                  "componentName": "标题",
+                  "children": [
+                    {
+                      "__config__": {
+                        "label": "单行文本",
+                        "labelWidth": null,
+                        "showLabel": true,
+                        "tag": "el-input",
+                        "tagIcon": "input",
+                        "required": true,
+                        "layout": "colFormItem",
+                        "regList": [],
+                        "formId": 113,
+                        "renderKey": 1621415432107
+                      },
+                      "__slot__": {
+                        "prepend": "",
+                        "append": ""
+                      },
+                      "placeholder": "请输入单行文本",
+                      "style": {
+                        "width": "100%"
+                      },
+                      "clearable": true,
+                      "prefix-icon": "",
+                      "suffix-icon": "",
+                      "maxlength": null,
+                      "show-word-limit": false,
+                      "readonly": false,
+                      "disabled": false,
+                      "__vModel__": "field113"
+                    },
+                    {
+                      "__config__": {
+                        "label": "多行文本",
+                        "labelWidth": null,
+                        "showLabel": true,
+                        "tag": "el-input",
+                        "tagIcon": "textarea",
+                        "required": true,
+                        "layout": "colFormItem",
+                        "regList": [],
+                        "formId": 114,
+                        "renderKey": 1621415438457
+                      },
+                      "type": "textarea",
+                      "placeholder": "请输入多行文本",
+                      "autosize": {
+                        "minRows": 4,
+                        "maxRows": 4
+                      },
+                      "style": {
+                        "width": "100%"
+                      },
+                      "maxlength": null,
+                      "show-word-limit": false,
+                      "readonly": false,
+                      "disabled": false,
+                      "__vModel__": "field114"
+                    }
+                  ]
+                },
+                "type": "default",
+                "justify": "start",
+                "align": "top"
+              }
+            ],
+            "formRef": "elForm",
+            "formModel": "formData",
+            "size": "medium",
+            "labelPosition": "left",
+            "labelWidth": 100,
+            "formRules": "rules",
+            "gutter": 0,
+            "disabled": false,
+            "formBtns": true,
+            "unFocusedComponentBorder": false,
+            "loadApi": "/data?id=10"
+          }
+        }
+      }
+    },
+    {
+      "id": null,
+      "form": {
+        "account": "admin",
+        "password": "aa",
+        "sex": 1,
+        "field106": true,
+        "field109": "2024-01-01",
+        "field113": "cs",
+        "field114": "cs"
+      }
+    },
+    {
+      "id": 10,
+      "form": {
+        "version": "1",
+        "name": "SampleList",
+        "title": "示例列表",
+        "pageStyle": {},
+        "loadApi": "",
+        "response": {
+          "data": "data"
+        },
+        "request": {},
+        "moduleContainer": {},
+        "modules": [
+          {
+            "type": "autolist",
+            "name": "",
+            "key": "e59992z8-bb88-a788-9922-1623488775885",
+            "container": {
+              "height": ""
+            }
+          }
+        ],
+        "moduleData": {
+          "e59992z8-bb88-a788-9922-1623488775885": {
+            "loadApi": "/data?id=100",
+            "itemNavigation": "/index/index?id",
+            "response": {
+              "list": "list"
+            },
+            "request": {
+              "default": {},
+              "ps": "pageSize",
+              "pn": "pageNum"
+            },
+            "itemModule": {
+              "name": "SelfInspectionRecordItem"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 9999999,
+      "form": {
+        "autoForm": "https://img1.baidu.com/it/u=2363594029,2446377516&fm=26&fmt=auto"
+      }
+    },
+    {
+      "id": 55,
+      "form": {
+        "version": "1",
+        "name": "somePageComponent",
+        "title": "部分页面组件",
+        "pageStyle": {},
+        "loadApi": "",
+        "response": {
+          "data": "data"
+        },
+        "request": {},
+        "moduleContainer": {},
+        "modules": [
+          {
+            "type": "banner",
+            "name": "banner",
+            "key": "89084045-v4d5-7122-3300-1623511112885"
+          },
+          {
+            "type": "steps",
+            "name": "steps",
+            "key": "15466512-1502-4123-3100-1541654512510"
+          },
+          {
+            "type": "boxList",
+            "name": "boxList",
+            "key": "851344s-ad44-55ea-ca11-4225534d52b7",
+            "container": {}
+          }
+        ],
+        "moduleData": {
+          "89084045-v4d5-7122-3300-1623511112885": {
+            "banners": [
+              {
+                "img": "https://img0.baidu.com/it/u=1016860127,2747783794&fm=26&fmt=auto",
+                "itemNavigation": "/?id=1"
+              }
+            ]
+          },
+          "15466512-1502-4123-3100-1541654512510": {
+            "steps": {
+              "step": [
+                {
+                  "text": "步骤1"
+                },
+                {
+                  "text": "步骤2"
+                },
+                {
+                  "text": "步骤3"
+                }
+              ],
+              "active": 1
+            }
+          },
+          "851344s-ad44-55ea-ca11-4225534d52b7": {
+            "navList": [
+              {
+                "number": 500,
+                "title": "数量1"
+              },
+              {
+                "number": 10522,
+                "title": "数量2"
+              },
+              {
+                "number": 600,
+                "title": "数量3"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": 55555,
+      "form": {
+        "version": "1",
+        "name": "spiritMarket",
+        "title": "精灵市场",
+        "pageStyle": {
+          "background": "red"
+        },
+        "loadApi": "",
+        "response": {
+          "data": "data"
+        },
+        "request": {},
+        "moduleContainer": {},
+        "modules": [
+          {
+            "type": "autolist",
+            "name": "",
+            "key": "e59992z8-bb88-a788-9922-1623488775885",
+            "container": {
+              "height": ""
+            }
+          }
+        ],
+        "moduleData": {
+          "e59992z8-bb88-a788-9922-1623488775885": {
+            "loadApi": "/api/u/wisp/market",
+            "itemNavigation": "/index/index?id",
+            "response": {
+              "list": "records"
+            },
+            "request": {
+              "default": {},
+              "ps": "pageSize",
+              "pn": "pageNum"
+            },
+            "itemModule": {
+              "name": "spiritMarket"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 66666,
+      "form": {
+        "version": "1",
+        "name": "PersonalCenter",
+        "title": "个人中心",
+        "pageStyle": {},
+        "request": {},
+        "response": {
+          "data": "data"
+        },
+        "container": {},
+        "modules": [
+          {
+            "type": "avatar",
+            "key": "95afd71a-c8d5-11eb-aca5-0800271e55b7",
+            "name": "",
+            "container": {},
+            "binding": "avatar"
+          }
+        ],
+        "dataSource": {
+          "api": ""
+        },
+        "moduleData": {
+          "95afd71a-c8d5-11eb-aca5-0800271e55b7": {
+            "navigator": "/myInformation/myInformation"
+          }
+        }
+      }
+    },
+    {
+      "id": 666666,
+      "form": {
+        "version": "1",
+        "name": "个人资料",
+        "title": "个人资料",
+        "pageStyle": {},
+        "request": {},
+        "response": {
+          "data": "data"
+        },
+        "container": {},
+        "modules": [
+          {
+            "type": "autoform",
+            "key": "96afd71a-c8d5-11eb-aca5-0800271e55b7",
+            "name": "",
+            "container": {
+              "background": "#ffffff"
+            }
+          }
+        ],
+        "moduleData": {
+          "96afd71a-c8d5-11eb-aca5-0800271e55b7": {
+            "fields": [
+              {
+                "__config__": {
+                  "label": "账号",
+                  "labelWidth": null,
+                  "showLabel": true,
+                  "tag": "el-input",
+                  "tagIcon": "input",
+                  "defaultValue": "admin",
+                  "required": true,
+                  "layout": "colFormItem",
+                  "regList": [],
+                  "formId": 101,
+                  "renderKey": 1621415022993
+                },
+                "__slot__": {
+                  "prepend": "",
+                  "append": ""
+                },
+                "placeholder": "请输入账号",
+                "style": {
+                  "width": "100%"
+                },
+                "clearable": true,
+                "prefix-icon": "",
+                "suffix-icon": "",
+                "maxlength": null,
+                "show-word-limit": false,
+                "readonly": false,
+                "disabled": false,
+                "__vModel__": "account"
+              },
+              {
+                "__config__": {
+                  "label": "密码",
+                  "showLabel": true,
+                  "labelWidth": null,
+                  "tag": "el-input",
+                  "tagIcon": "password",
+                  "layout": "colFormItem",
+                  "required": true,
+                  "regList": [
+                    {
+                      "pattern": "/0-9/",
+                      "message": "密码只能是纯数字"
+                    }
+                  ],
+                  "formId": 102,
+                  "renderKey": 1621415025493
+                },
+                "__slot__": {
+                  "prepend": "",
+                  "append": ""
+                },
+                "placeholder": "请输入密码",
+                "show-password": true,
+                "style": {
+                  "width": "100%"
+                },
+                "clearable": true,
+                "prefix-icon": "",
+                "suffix-icon": "",
+                "maxlength": null,
+                "show-word-limit": false,
+                "readonly": false,
+                "disabled": false,
+                "__vModel__": "password"
+              },
+              {
+                "__config__": {
+                  "label": "性别",
+                  "showLabel": true,
+                  "labelWidth": null,
+                  "tag": "el-select",
+                  "tagIcon": "select",
+                  "layout": "colFormItem",
+                  "required": true,
+                  "regList": [],
+                  "formId": 103,
+                  "renderKey": 1621415255861
+                },
+                "__slot__": {
+                  "options": [
+                    {
+                      "label": "男",
+                      "value": 1
+                    },
+                    {
+                      "label": "女",
+                      "value": 2
+                    }
+                  ]
+                },
+                "placeholder": "请选择性别",
+                "style": {
+                  "width": "100%"
+                },
+                "clearable": true,
+                "disabled": false,
+                "filterable": false,
+                "multiple": false,
+                "__vModel__": "sex"
+              },
+              {
+                "__config__": {
+                  "label": "开关",
+                  "tag": "el-switch",
+                  "tagIcon": "switch",
+                  "defaultValue": false,
+                  "showLabel": true,
+                  "labelWidth": null,
+                  "layout": "colFormItem",
+                  "required": true,
+                  "regList": [],
+                  "formId": 106,
+                  "renderKey": 1621415361475
+                },
+                "style": {},
+                "disabled": false,
+                "active-text": "",
+                "inactive-text": "",
+                "active-color": null,
+                "inactive-color": null,
+                "active-value": true,
+                "inactive-value": false,
+                "__vModel__": "field106"
+              },
+              {
+                "__config__": {
+                  "label": "日期选择",
+                  "tag": "el-date-picker",
+                  "tagIcon": "date",
+                  "defaultValue": null,
+                  "showLabel": true,
+                  "labelWidth": null,
+                  "layout": "colFormItem",
+                  "required": true,
+                  "regList": [],
+                  "formId": 109,
+                  "renderKey": 1621415374360
+                },
+                "placeholder": "请选择日期选择",
+                "type": "date",
+                "style": {
+                  "width": "100%"
+                },
+                "disabled": false,
+                "clearable": true,
+                "format": "yyyy-MM-dd",
+                "value-format": "yyyy-MM-dd",
+                "readonly": false,
+                "__vModel__": "field109"
+              },
+              {
+                "__config__": {
+                  "layout": "rowFormItem",
+                  "tagIcon": "row",
+                  "layoutTree": true,
+                  "formId": 112,
+                  "renderKey": 1621415404383,
+                  "componentName": "标题",
+                  "children": [
+                    {
+                      "__config__": {
+                        "label": "单行文本",
+                        "labelWidth": null,
+                        "showLabel": true,
+                        "tag": "el-input",
+                        "tagIcon": "input",
+                        "required": true,
+                        "layout": "colFormItem",
+                        "regList": [],
+                        "formId": 113,
+                        "renderKey": 1621415432107
+                      },
+                      "__slot__": {
+                        "prepend": "",
+                        "append": ""
+                      },
+                      "placeholder": "请输入单行文本",
+                      "style": {
+                        "width": "100%"
+                      },
+                      "clearable": true,
+                      "prefix-icon": "",
+                      "suffix-icon": "",
+                      "maxlength": null,
+                      "show-word-limit": false,
+                      "readonly": false,
+                      "disabled": false,
+                      "__vModel__": "field113"
+                    },
+                    {
+                      "__config__": {
+                        "label": "多行文本",
+                        "labelWidth": null,
+                        "showLabel": true,
+                        "tag": "el-input",
+                        "tagIcon": "textarea",
+                        "required": true,
+                        "layout": "colFormItem",
+                        "regList": [],
+                        "formId": 114,
+                        "renderKey": 1621415438457
+                      },
+                      "type": "textarea",
+                      "placeholder": "请输入多行文本",
+                      "autosize": {
+                        "minRows": 4,
+                        "maxRows": 4
+                      },
+                      "style": {
+                        "width": "100%"
+                      },
+                      "maxlength": null,
+                      "show-word-limit": false,
+                      "readonly": false,
+                      "disabled": false,
+                      "__vModel__": "field114"
+                    }
+                  ]
+                },
+                "type": "default",
+                "justify": "start",
+                "align": "top"
+              }
+            ],
+            "formRef": "elForm",
+            "formModel": "formData",
+            "size": "medium",
+            "labelPosition": "left",
+            "labelWidth": 100,
+            "formRules": "rules",
+            "gutter": 0,
+            "disabled": false,
+            "formBtns": true,
+            "unFocusedComponentBorder": false,
+            "loadApi": "http://localhost:8080/api/crud/oms/player/players"
+          }
+        }
+      }
+    },
+    {
+      "id": null,
+      "form": {
+        "account": "admin"
+      }
+    },
+    {
+      "id": 77777,
+      "form": {
+        "version": "1",
+        "name": "测试个人信息",
+        "title": "测试个人信息",
+        "pageStyle": {
+          "background": "red"
+        },
+        "loadApi": "",
+        "response": {
+          "data": "data"
+        },
+        "request": {},
+        "moduleContainer": {},
+        "modules": [
+          {
+            "type": "autolist",
+            "name": "",
+            "key": "e59992z8-bb88-a788-9922-1623488775885",
+            "container": {
+              "height": ""
+            }
+          }
+        ],
+        "moduleData": {
+          "e59992z8-bb88-a788-9922-1623488775885": {
+            "loadApi": "/api/crud/oms/player/players",
+            "itemNavigation": "/index/index?id",
+            "response": {
+              "list": "records"
+            },
+            "request": {
+              "default": {},
+              "ps": "pageSize",
+              "pn": "pageNum"
+            },
+            "itemModule": {
+              "name": "spirit"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 66667,
+      "form": {
+        "version": "1",
+        "name": "个人资料",
+        "title": "个人资料",
+        "pageStyle": {},
+        "request": {},
+        "response": {
+          "data": "data"
+        },
+        "container": {},
+        "modules": [
+          {
+            "type": "autoform",
+            "key": "95afd71a-c8d5-11eb-aca5-0800271e55b7",
+            "name": "",
+            "container": {
+              "background": "#ffffff"
+            }
+          }
+        ],
+        "moduleData": {
+          "95afd71a-c8d5-11eb-aca5-0800271e55b7": {
+            "fields": [
+              {
+                "__config__": {
+                  "label": "姓名",
+                  "labelWidth": null,
+                  "showLabel": true,
+                  "tag": "el-input",
+                  "tagIcon": "input",
+                  "defaultValue": "admin",
+                  "required": true,
+                  "layout": "colFormItem",
+                  "regList": [],
+                  "formId": 101,
+                  "renderKey": 1621415022993
+                },
+                "__slot__": {
+                  "prepend": "",
+                  "append": ""
+                },
+                "placeholder": "请输入姓名",
+                "style": {
+                  "width": "100%"
+                },
+                "clearable": true,
+                "prefix-icon": "",
+                "suffix-icon": "",
+                "maxlength": null,
+                "show-word-limit": false,
+                "readonly": false,
+                "disabled": false,
+                "__vModel__": "name"
+              },
+              {
+                "__config__": {
+                  "label": "账号",
+                  "labelWidth": null,
+                  "showLabel": true,
+                  "tag": "el-input",
+                  "tagIcon": "input",
+                  "defaultValue": "admin",
+                  "required": true,
+                  "layout": "colFormItem",
+                  "regList": [],
+                  "formId": 101,
+                  "renderKey": 1621415022993
+                },
+                "__slot__": {
+                  "prepend": "",
+                  "append": ""
+                },
+                "placeholder": "请输入账号",
+                "style": {
+                  "width": "100%"
+                },
+                "clearable": true,
+                "prefix-icon": "",
+                "suffix-icon": "",
+                "maxlength": null,
+                "show-word-limit": false,
+                "readonly": false,
+                "disabled": false,
+                "__vModel__": "account"
+              }
+            ],
+            "formRef": "elForm",
+            "formModel": "formData",
+            "size": "medium",
+            "labelPosition": "left",
+            "labelWidth": 100,
+            "formRules": "rules",
+            "gutter": 0,
+            "disabled": false,
+            "formBtns": true,
+            "unFocusedComponentBorder": false
+          }
+        }
+      }
+    },
+    {
+      "id": 88888,
+      "form": {
+        "version": "1",
+        "name": "noPayList",
+        "title": "未付款列表",
+        "pageStyle": {},
+        "loadApi": "",
+        "response": {
+          "data": "data"
+        },
+        "request": {},
+        "moduleContainer": {},
+        "modules": [
+          {
+            "type": "autolist",
+            "name": "",
+            "key": "e59992z8-bb88-a788-9922-1623488775885",
+            "container": {
+              "height": ""
+            }
+          }
+        ],
+        "moduleData": {
+          "e59992z8-bb88-a788-9922-1623488775885": {
+            "loadApi": "/api/crud/oms/player/players",
+            "itemNavigation": "/index/index?id",
+            "response": {
+              "list": "list"
+            },
+            "request": {
+              "default": {},
+              "ps": "pageSize",
+              "pn": "pageNo"
+            },
+            "itemModule": {
+              "name": "pay"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 123456,
+      "form": {
+        "version": "1",
+        "name": "Market",
+        "title": "精灵广场",
+        "pageStyle": {
+          "background": "red"
+        },
+        "loadApi": "",
+        "response": {
+          "data": "data"
+        },
+        "request": {},
+        "moduleContainer": {},
+        "modules": [
+          {
+            "type": "autolist",
+            "name": "",
+            "key": "e59992z8-bb88-a788-9922-1623488775885",
+            "container": {
+              "height": ""
+            }
+          }
+        ],
+        "moduleData": {
+          "e59992z8-bb88-a788-9922-1623488775885": {
+            "loadApi": "http://localhost:8080/api/u/wisp/market",
+            "itemNavigation": "",
+            "response": {
+              "list": "records"
+            },
+            "request": {
+              "default": {},
+              "ps": "pageSize",
+              "pn": "pageNo"
+            },
+            "itemModule": {
+              "name": "market"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 456789,
+      "form": {
+        "version": "1",
+        "name": "bookSpirit",
+        "title": "预约精灵",
+        "pageStyle": {
+          "background": "red"
+        },
+        "loadApi": "",
+        "response": {
+          "data": "data"
+        },
+        "request": {},
+        "moduleContainer": {},
+        "modules": [
+          {
+            "type": "autolist",
+            "name": "",
+            "key": "e59992z8-bb88-a788-9922-1623488775885",
+            "container": {
+              "height": ""
+            }
+          }
+        ],
+        "moduleData": {
+          "e59992z8-bb88-a788-9922-1623488775885": {
+            "loadApi": "/api/crud/oms/wispBookingRecord/wispBookingRecords",
+            "itemNavigation": "",
+            "response": {
+              "list": "records"
+            },
+            "request": {
+              "default": {},
+              "ps": "pageSize",
+              "pn": "pageNum"
+            },
+            "itemModule": {
+              "name": "bookspirit"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 555666,
+      "form": {
+        "version": "1",
+        "name": "PersonalInfo",
+        "title": "个人中心",
+        "pageStyle": {},
+        "request": {},
+        "response": {
+          "data": "data"
+        },
+        "container": {},
+        "modules": [
+          {
+            "type": "user",
+            "key": "95afd71a-c8d5-11eb-aca5-0800271e55b7",
+            "name": "",
+            "container": {},
+            "binding": "user"
+          }
+        ],
+        "dataSource": {
+          "api": ""
+        },
+        "moduleData": {
+          "95afd71a-c8d5-11eb-aca5-0800271e55b7": {
+            "navigator": "/myInformation/myInformation"
+          }
+        }
+      }
+    },
+    {
+      "id": 222333,
+      "form": {
+        "version": "1",
+        "name": "userDetail",
+        "title": "个人资料",
+        "pageStyle": {},
+        "request": {},
+        "response": {
+          "data": "data"
+        },
+        "container": {},
+        "modules": [
+          {
+            "type": "autoform",
+            "key": "96afd71a-c8d5-11eb-aca5-0800271e55b7",
+            "name": "基本信息",
+            "container": {}
+          },
+          {
+            "type": "autoform",
+            "key": "96afd71a-c8d5-11eb-aca5-0800271e55b6",
+            "name": "账户信息",
+            "navigator": {
+              "url": "/defaultPage/page?id=71541",
+              "title": "修改账户信息"
+            },
+            "container": {}
+          },
+          {
+            "type": "autoform",
+            "key": "96afd71a-c8d5-11eb-aca5-0800271e55b4",
+            "name": "支付密码",
+            "modal": {
+              "title": "修改密码",
+              "ModalTitle": "修改支付密码",
+              "components": [
+                {
+                  "label": "常用聯係電話验证码",
+                  "type": "code",
+                  "field": "verifyCode",
+                  "placeholder": "输入验证码",
+                  "requestUrl": "/api/sms/v1/captcha"
+                },
+                {
+                  "label": "新的支付密码",
+                  "placeholder": "设置新的支付密码",
+                  "field": "newPaymentPassword",
+                  "type": "password"
+                }
+              ]
+            },
+            "container": {}
+          }
+        ],
+        "moduleData": {
+          "96afd71a-c8d5-11eb-aca5-0800271e55b7": {
+            "fields": [
+              {
+                "__config__": {
+                  "label": "姓名:",
+                  "labelWidth": null,
+                  "showLabel": true,
+                  "tag": "el-input",
+                  "tagIcon": "input",
+                  "required": false,
+                  "layout": "colFormItem",
+                  "regList": [],
+                  "formId": 113,
+                  "renderKey": 1621415432107
+                },
+                "readonly": true,
+                "__vModel__": "name"
+              },
+              {
+                "__config__": {
+                  "label": "会员等级:",
+                  "labelWidth": null,
+                  "showLabel": true,
+                  "tag": "el-select",
+                  "tagIcon": "select",
+                  "required": false,
+                  "layout": "colFormItem",
+                  "regList": [],
+                  "formId": 113,
+                  "renderKey": 1621415432107
+                },
+                "__slot__": {
+                  "options": [
+                    {
+                      "label": "註冊會員",
+                      "value": -1
+                    },
+                    {
+                      "label": "激活",
+                      "value": 0
+                    },
+                    {
+                      "label": "有效會員",
+                      "value": 10
+                    },
+                    {
+                      "label": "普通會員",
+                      "value": 20
+                    },
+                    {
+                      "label": "青銅有效會員",
+                      "value": 1
+                    },
+                    {
+                      "label": "白銀有效會員",
+                      "value": 2
+                    },
+                    {
+                      "label": "黃金有效會員",
+                      "value": 3
+                    },
+                    {
+                      "label": "鑽石有效會員",
+                      "value": 4
+                    }
+                  ]
+                },
+                "style": {
+                  "color": "#164882"
+                },
+                "readonly": true,
+                "__vModel__": "level"
+              },
+              {
+                "__config__": {
+                  "label": "主手机号码:",
+                  "labelWidth": null,
+                  "showLabel": true,
+                  "tag": "el-input",
+                  "tagIcon": "input",
+                  "required": false,
+                  "layout": "colFormItem",
+                  "regList": [],
+                  "formId": 113,
+                  "renderKey": 1621415432107
+                },
+                "readonly": true,
+                "__vModel__": "mobilePhone"
+              },
+              {
+                "__config__": {
+                  "label": "常用聯係電話:",
+                  "labelWidth": null,
+                  "showLabel": true,
+                  "tag": "el-input",
+                  "tagIcon": "input",
+                  "required": false,
+                  "layout": "colFormItem",
+                  "regList": [],
+                  "formId": 113,
+                  "renderKey": 1621415432107
+                },
+                "canChange": true,
+                "saveAPI": "",
+                "method": "GET",
+                "modalTitle": "修改常用聯係電話",
+                "components": [
+                  {
+                    "label": "主手机号验证码",
+                    "type": "code",
+                    "field": "verifyCode",
+                    "placeholder": "输入验证码",
+                    "requestUrl": "/api/sms/v1/captcha",
+                    "placeholder-style": "color: #fff;opcity: 1",
+                    "inputStyle": "color: #fff"
+                  },
+                  {
+                    "label": "常用聯係電話",
+                    "placeholder": "输入新的常用聯係電話",
+                    "field": "newBackupMobilePhone",
+                    "placeholder-style": "color: #fff;opcity: 1",
+                    "inputStyle": "color: #fff"
+                  }
+                ],
+                "doNotUseValue": "FROZEN",
+                "statusField": "status",
+                "readonly": true,
+                "__vModel__": "backupMobilePhone"
+              },
+              {
+                "__config__": {
+                  "label": "账号状态:",
+                  "labelWidth": null,
+                  "showLabel": true,
+                  "tag": "el-input",
+                  "tagIcon": "status",
+                  "required": false,
+                  "layout": "colFormItem",
+                  "regList": [],
+                  "formId": 113,
+                  "renderKey": 1621415432107
+                },
+                "__slot__": {
+                  "options": [
+                    {
+                      "label": "已冻结",
+                      "value": "FROZEN",
+                      "color": "#B04849",
+                      "display": true,
+                      "displayLabel": "申请解冻",
+                      "api": "",
+                      "successText": "解冻成功",
+                      "errorText": "解冻失败"
+                    },
+                    {
+                      "label": "正常",
+                      "value": "NORMAL",
+                      "color": "",
+                      "display": false
+                    },
+                    {
+                      "label": "审核不通过",
+                      "value": "REFUSED",
+                      "color": "",
+                      "display": false
+                    },
+                    {
+                      "label": "待审核",
+                      "value": "PENDING",
+                      "color": "",
+                      "display": false
+                    }
+                  ]
+                },
+                "modalTitle": "申请解冻",
+                "components": [
+                  {
+                    "type": "status"
+                  }
+                ],
+                "readonly": true,
+                "__vModel__": "status"
+              }
+            ],
+            "formRef": "elForm",
+            "formModel": "formData",
+            "size": "medium",
+            "labelPosition": "left",
+            "labelWidth": 100,
+            "formRules": "rules",
+            "gutter": 0,
+            "disabled": false,
+            "formBtns": false,
+            "unFocusedComponentBorder": false,
+            "loadApi": "/api/u/player"
+          },
+          "96afd71a-c8d5-11eb-aca5-0800271e55b6": {
+            "fields": [
+              {
+                "__config__": {
+                  "layout": "rowFormItem",
+                  "tagIcon": "row",
+                  "layoutTree": true,
+                  "formId": 112,
+                  "renderKey": 1621415404383,
+                  "componentName": "微信",
+                  "children": [
+                    {
+                      "__config__": {
+                        "label": "户名:",
+                        "labelWidth": null,
+                        "showLabel": true,
+                        "tag": "el-input",
+                        "tagIcon": "input",
+                        "required": false,
+                        "layout": "colFormItem",
+                        "regList": [],
+                        "formId": 113,
+                        "renderKey": 1621415432107
+                      },
+                      "readonly": true,
+                      "__vModel__": "wechatAccount"
+                    },
+                    {
+                      "__config__": {
+                        "label": "支付二维码:",
+                        "labelWidth": null,
+                        "showLabel": true,
+                        "tag": "el-image",
+                        "tagIcon": "input",
+                        "required": false,
+                        "layout": "colFormItem",
+                        "regList": [],
+                        "formId": 113,
+                        "renderKey": 1621415432107
+                      },
+                      "readonly": true,
+                      "__vModel__": "wechatQrCodePhotoUrl"
+                    }
+                  ]
+                },
+                "type": "default",
+                "justify": "start",
+                "align": "top"
+              },
+              {
+                "__config__": {
+                  "layout": "rowFormItem",
+                  "tagIcon": "row",
+                  "layoutTree": true,
+                  "formId": 112,
+                  "renderKey": 1621415404383,
+                  "componentName": "支付宝",
+                  "children": [
+                    {
+                      "__config__": {
+                        "label": "户名:",
+                        "labelWidth": null,
+                        "showLabel": true,
+                        "tag": "el-input",
+                        "tagIcon": "input",
+                        "required": false,
+                        "layout": "colFormItem",
+                        "regList": [],
+                        "formId": 113,
+                        "renderKey": 1621415432107
+                      },
+                      "readonly": true,
+                      "__vModel__": "alipayAccount"
+                    },
+                    {
+                      "__config__": {
+                        "label": "支付二维码:",
+                        "labelWidth": null,
+                        "showLabel": true,
+                        "tag": "el-image",
+                        "tagIcon": "input",
+                        "required": false,
+                        "layout": "colFormItem",
+                        "regList": [],
+                        "formId": 113,
+                        "renderKey": 1621415432107
+                      },
+                      "readonly": true,
+                      "__vModel__": "alipayQrCodePhotoUrl"
+                    }
+                  ]
+                },
+                "type": "default",
+                "justify": "start",
+                "align": "top"
+              },
+              {
+                "__config__": {
+                  "layout": "rowFormItem",
+                  "tagIcon": "row",
+                  "layoutTree": true,
+                  "formId": 112,
+                  "renderKey": 1621415404383,
+                  "componentName": "银行卡信息1",
+                  "children": [
+                    {
+                      "__config__": {
+                        "label": "銀行名稱:",
+                        "labelWidth": null,
+                        "showLabel": true,
+                        "tag": "el-input",
+                        "tagIcon": "input",
+                        "required": false,
+                        "layout": "colFormItem",
+                        "regList": [],
+                        "formId": 113,
+                        "renderKey": 1621415432107
+                      },
+                      "readonly": true,
+                      "__vModel__": "bankName"
+                    },
+                    {
+                      "__config__": {
+                        "label": "户名:",
+                        "labelWidth": null,
+                        "showLabel": true,
+                        "tag": "el-input",
+                        "tagIcon": "input",
+                        "required": false,
+                        "layout": "colFormItem",
+                        "regList": [],
+                        "formId": 113,
+                        "renderKey": 1621415432107
+                      },
+                      "readonly": true,
+                      "__vModel__": "bankAccountName"
+                    },
+                    {
+                      "__config__": {
+                        "label": "银行卡号:",
+                        "labelWidth": null,
+                        "showLabel": true,
+                        "tag": "el-input",
+                        "tagIcon": "input",
+                        "required": false,
+                        "layout": "colFormItem",
+                        "regList": [],
+                        "formId": 113,
+                        "renderKey": 1621415432107
+                      },
+                      "readonly": true,
+                      "__vModel__": "bankAccountNumber"
+                    }
+                  ]
+                },
+                "type": "default",
+                "justify": "start",
+                "align": "top"
+              },
+              {
+                "__config__": {
+                  "layout": "rowFormItem",
+                  "tagIcon": "row",
+                  "layoutTree": true,
+                  "formId": 112,
+                  "renderKey": 1621415404383,
+                  "componentName": "银行卡信息2",
+                  "children": [
+                    {
+                      "__config__": {
+                        "label": "銀行名稱:",
+                        "labelWidth": null,
+                        "showLabel": true,
+                        "tag": "el-input",
+                        "tagIcon": "input",
+                        "required": false,
+                        "layout": "colFormItem",
+                        "regList": [],
+                        "formId": 113,
+                        "renderKey": 1621415432107
+                      },
+                      "readonly": true,
+                      "__vModel__": "bankName2"
+                    },
+                    {
+                      "__config__": {
+                        "label": "户名:",
+                        "labelWidth": null,
+                        "showLabel": true,
+                        "tag": "el-input",
+                        "tagIcon": "input",
+                        "required": false,
+                        "layout": "colFormItem",
+                        "regList": [],
+                        "formId": 113,
+                        "renderKey": 1621415432107
+                      },
+                      "readonly": true,
+                      "__vModel__": "bankAccountName2"
+                    },
+                    {
+                      "__config__": {
+                        "label": "银行卡号:",
+                        "labelWidth": null,
+                        "showLabel": true,
+                        "tag": "el-input",
+                        "tagIcon": "input",
+                        "required": false,
+                        "layout": "colFormItem",
+                        "regList": [],
+                        "formId": 113,
+                        "renderKey": 1621415432107
+                      },
+                      "readonly": true,
+                      "__vModel__": "bankAccountNumber2"
+                    }
+                  ]
+                },
+                "type": "default",
+                "justify": "start",
+                "align": "top"
+              }
+            ],
+            "formRef": "elForm",
+            "formModel": "formData",
+            "size": "medium",
+            "labelPosition": "left",
+            "labelWidth": 100,
+            "formRules": "rules",
+            "gutter": 0,
+            "disabled": false,
+            "formBtns": false,
+            "unFocusedComponentBorder": false,
+            "loadApi": "/api/u/player"
+          },
+          "96afd71a-c8d5-11eb-aca5-0800271e55b4": {
+            "fields": [
+              {
+                "__config__": {
+                  "label": "支付密码:",
+                  "labelWidth": null,
+                  "showLabel": true,
+                  "tag": "el-input",
+                  "tagIcon": "password",
+                  "defaultValue": "******",
+                  "required": false,
+                  "layout": "colFormItem",
+                  "regList": [],
+                  "__slot__": {
+                    "prepend": "",
+                    "append": ""
+                  },
+                  "formId": 113,
+                  "renderKey": 1621415432107
+                },
+                "tips": "(用于GuGu令)",
+                "readonly": true,
+                "__vModel__": "paymentPassword"
+              }
+            ],
+            "formRef": "elForm",
+            "formModel": "formData",
+            "size": "medium",
+            "labelPosition": "left",
+            "labelWidth": 100,
+            "formRules": "rules",
+            "gutter": 0,
+            "disabled": false,
+            "formBtns": false,
+            "unFocusedComponentBorder": false,
+            "loadApi": "/api/u/player"
+          }
+        }
+      }
+    },
+    {
+      "id": 333444,
+      "form": {
+        "version": "1",
+        "name": "editUserDetail",
+        "title": "修改个人信息",
+        "pageStyle": {},
+        "request": {},
+        "response": {
+          "data": "data"
+        },
+        "container": {},
+        "modules": [
+          {
+            "type": "autoform",
+            "key": "96afd71a-c8d5-11eb-aca5-0800271e55b7",
+            "name": "移动账号",
+            "container": {
+              "background": "#ffffff"
+            }
+          }
+        ],
+        "moduleData": {
+          "96afd71a-c8d5-11eb-aca5-0800271e55b7": {
+            "fields": [
+              {
+                "__config__": {
+                  "label": "账号",
+                  "labelWidth": null,
+                  "showLabel": true,
+                  "tag": "el-input",
+                  "tagIcon": "input",
+                  "defaultValue": "admin",
+                  "required": true,
+                  "layout": "colFormItem",
+                  "regList": [],
+                  "formId": 101,
+                  "renderKey": 1621415022993
+                },
+                "__slot__": {
+                  "prepend": "",
+                  "append": ""
+                },
+                "placeholder": "请输入账号",
+                "style": {
+                  "width": "100%"
+                },
+                "clearable": true,
+                "prefix-icon": "",
+                "suffix-icon": "",
+                "maxlength": null,
+                "show-word-limit": false,
+                "readonly": false,
+                "disabled": false,
+                "__vModel__": "name"
+              },
+              {
+                "__config__": {
+                  "label": "账号状态",
+                  "labelWidth": null,
+                  "showLabel": true,
+                  "tag": "el-input",
+                  "tagIcon": "input",
+                  "defaultValue": "admin",
+                  "required": true,
+                  "layout": "colFormItem",
+                  "regList": [],
+                  "formId": 101,
+                  "renderKey": 1621415022993
+                },
+                "__slot__": {
+                  "prepend": "",
+                  "append": ""
+                },
+                "placeholder": "请输入账号",
+                "style": {
+                  "width": "100%"
+                },
+                "clearable": true,
+                "prefix-icon": "",
+                "suffix-icon": "",
+                "maxlength": null,
+                "show-word-limit": false,
+                "readonly": false,
+                "disabled": false,
+                "__vModel__": "status"
+              },
+              {
+                "__config__": {
+                  "label": "移动账号",
+                  "labelWidth": null,
+                  "showLabel": true,
+                  "tag": "el-input",
+                  "tagIcon": "input",
+                  "defaultValue": "admin",
+                  "required": true,
+                  "layout": "colFormItem",
+                  "regList": [],
+                  "formId": 101,
+                  "renderKey": 1621415022993
+                },
+                "__slot__": {
+                  "prepend": "",
+                  "append": ""
+                },
+                "placeholder": "请输入账号",
+                "style": {
+                  "width": "100%"
+                },
+                "clearable": true,
+                "prefix-icon": "",
+                "suffix-icon": "",
+                "maxlength": null,
+                "show-word-limit": false,
+                "readonly": false,
+                "disabled": false,
+                "__vModel__": "wechatAccount"
+              },
+              {
+                "__config__": {
+                  "label": "移动账号二维码",
+                  "labelWidth": null,
+                  "showLabel": true,
+                  "tag": "el-input",
+                  "tagIcon": "input",
+                  "defaultValue": "admin",
+                  "required": true,
+                  "layout": "colFormItem",
+                  "regList": [],
+                  "formId": 101,
+                  "renderKey": 1621415022993
+                },
+                "__slot__": {
+                  "prepend": "",
+                  "append": ""
+                },
+                "placeholder": "请输入账号",
+                "style": {
+                  "width": "100%"
+                },
+                "clearable": true,
+                "prefix-icon": "",
+                "suffix-icon": "",
+                "maxlength": null,
+                "show-word-limit": false,
+                "readonly": false,
+                "disabled": false,
+                "__vModel__": "wechatQrCodePhotoUrl"
+              },
+              {
+                "__config__": {
+                  "label": "银行卡号",
+                  "labelWidth": null,
+                  "showLabel": true,
+                  "tag": "el-input",
+                  "tagIcon": "input",
+                  "defaultValue": "admin",
+                  "required": true,
+                  "layout": "colFormItem",
+                  "regList": [],
+                  "formId": 101,
+                  "renderKey": 1621415022993
+                },
+                "__slot__": {
+                  "prepend": "",
+                  "append": ""
+                },
+                "placeholder": "请输入账号",
+                "style": {
+                  "width": "100%"
+                },
+                "clearable": true,
+                "prefix-icon": "",
+                "suffix-icon": "",
+                "maxlength": null,
+                "show-word-limit": false,
+                "readonly": false,
+                "disabled": false,
+                "__vModel__": "bankAccountNumber"
+              },
+              {
+                "__config__": {
+                  "label": "户名",
+                  "labelWidth": null,
+                  "showLabel": true,
+                  "tag": "el-input",
+                  "tagIcon": "input",
+                  "defaultValue": "admin",
+                  "required": true,
+                  "layout": "colFormItem",
+                  "regList": [],
+                  "formId": 101,
+                  "renderKey": 1621415022993
+                },
+                "__slot__": {
+                  "prepend": "",
+                  "append": ""
+                },
+                "placeholder": "请输入账号",
+                "style": {
+                  "width": "100%"
+                },
+                "clearable": true,
+                "prefix-icon": "",
+                "suffix-icon": "",
+                "maxlength": null,
+                "show-word-limit": false,
+                "readonly": false,
+                "disabled": false,
+                "__vModel__": "bankAccountName"
+              },
+              {
+                "__config__": {
+                  "label": "支付密码",
+                  "labelWidth": null,
+                  "showLabel": true,
+                  "tag": "el-input",
+                  "tagIcon": "input",
+                  "defaultValue": "admin",
+                  "required": true,
+                  "layout": "colFormItem",
+                  "regList": [],
+                  "formId": 101,
+                  "renderKey": 1621415022993
+                },
+                "__slot__": {
+                  "prepend": "",
+                  "append": ""
+                },
+                "placeholder": "请输入账号",
+                "style": {
+                  "width": "100%"
+                },
+                "clearable": true,
+                "prefix-icon": "",
+                "suffix-icon": "",
+                "maxlength": null,
+                "show-word-limit": false,
+                "readonly": false,
+                "disabled": false,
+                "__vModel__": "paymentPassword"
+              }
+            ],
+            "formRef": "elForm",
+            "formModel": "formData",
+            "size": "medium",
+            "labelPosition": "left",
+            "labelWidth": 100,
+            "formRules": "rules",
+            "gutter": 0,
+            "disabled": false,
+            "formBtns": false,
+            "unFocusedComponentBorder": false,
+            "loadApi": ""
+          }
+        }
+      }
+    },
+    {
+      "id": 7512,
+      "form": {
+        "version": "1",
+        "name": "testImageComponent",
+        "title": "测试图片组件",
+        "pageStyle": {},
+        "request": {},
+        "response": {
+          "data": "data"
+        },
+        "container": {},
+        "modules": [
+          {
+            "type": "autoform",
+            "key": "96afd71a-c8d5-11eb-aca5-0800271e55b7",
+            "name": ""
+          }
+        ],
+        "moduleData": {
+          "96afd71a-c8d5-11eb-aca5-0800271e55b7": {
+            "fields": [
+              {
+                "__config__": {
+                  "label": "图片",
+                  "labelWidth": null,
+                  "showLabel": true,
+                  "tag": "el-image",
+                  "defaultValue": "",
+                  "required": true,
+                  "layout": "colFormItem"
+                },
+                "max-count": "3",
+                "readonly": false,
+                "disabled": false,
+                "__vModel__": "image"
+              }
+            ],
+            "formRef": "elForm",
+            "formModel": "formData",
+            "size": "medium",
+            "labelPosition": "left",
+            "labelWidth": 100,
+            "formRules": "rules",
+            "gutter": 0,
+            "disabled": false,
+            "formBtns": true,
+            "unFocusedComponentBorder": false,
+            "loadApi": "/data?id=7512"
+          }
+        }
+      }
+    },
+    {
+      "id": 550311,
+      "form": {
+        "version": "1",
+        "name": "SignBox",
+        "title": "签到盒子",
+        "pageStyle": {
+          "background-color": "#050E17"
+        },
+        "request": {},
+        "response": {
+          "data": "data"
+        },
+        "container": {},
+        "modules": [
+          {
+            "type": "sign-box",
+            "key": "95afd71a-c8d5-11eb-aca5-0800271e55b7",
+            "name": "",
+            "container": {},
+            "binding": {
+              "isSign": "isSign",
+              "day": "day",
+              "list": "list"
+            }
+          }
+        ],
+        "dataSource": {
+          "api": "http://localhost:8080/data?id=550311"
+        },
+        "moduleData": {
+          "95afd71a-c8d5-11eb-aca5-0800271e55b7": {}
+        }
+      }
+    },
+    {
+      "id": null,
+      "form": {
+        "image": "[\"https://pic1.zhimg.com/v2-d58ce10bf4e01f5086c604a9cfed29f3_r.jpg?source=1940ef5c\",\"https://th.bing.com/th/id/OIP.1eFBRKkNrO_OfRQ2KpSTVwHaE7?w=281&h=188&c=7&r=0&o=5&pid=1.7\"]"
+      }
+    },
+    {
+      "id": 990327,
+      "form": {
+        "version": "1",
+        "name": "spiritMarket",
+        "title": "精灵广场",
+        "pageStyle": {},
+        "request": {},
+        "response": {
+          "data": "data"
+        },
+        "container": {},
+        "modules": [
+          {
+            "type": "pageTabbar",
+            "key": "95afd71a-c8d5-11eb-aca5-0800271e55b7",
+            "name": "",
+            "container": {}
+          }
+        ],
+        "moduleData": {
+          "95afd71a-c8d5-11eb-aca5-0800271e55b7": {
+            "tabs": [
+              {
+                "title": "精灵商城",
+                "url": "/pages/defaultPage/tabsPage?id=8888899"
+              },
+              {
+                "title": "签到盒子",
+                "url": "/pages/defaultPage/tabsPage?id=7777799"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": 990328,
+      "form": {
+        "version": "1",
+        "name": "pageTabbar",
+        "title": "pageTabbar",
+        "pageStyle": {},
+        "request": {},
+        "response": {
+          "data": "data"
+        },
+        "container": {},
+        "modules": [
+          {
+            "type": "navBar",
+            "key": "95afd71a-c8d5-11eb-aca5-0800271e55b7",
+            "name": "",
+            "container": {}
+          }
+        ],
+        "moduleData": {
+          "95afd71a-c8d5-11eb-aca5-0800271e55b7": {
+            "navs": [
+              {
+                "title": "精灵广场",
+                "image": "/static/public/elvesSquare.png",
+                "url": "/pages/defaultPage/tabsPage?id=990327"
+              },
+              {
+                "title": "我的精灵",
+                "image": "/static/public/MySpirit.png",
+                "url": "/pages/defaultPage/tabsPage?id=6666699"
+              },
+              {
+                "title": "服务中心",
+                "image": "/static/public/serviceCenter.png",
+                "url": "/pages/defaultPage/tabsPage?id=666999"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": 8888899,
+      "form": {
+        "version": "1",
+        "name": "Market",
+        "title": "精灵广场",
+        "pageStyle": {},
+        "loadApi": "",
+        "response": {
+          "data": "data"
+        },
+        "request": {},
+        "moduleContainer": {},
+        "modules": [
+          {
+            "type": "autolist",
+            "name": "",
+            "key": "e59992z8-bb88-a788-9922-1623488775885",
+            "container": {
+              "height": "",
+              "padding-top": "20px",
+              "background": "#050E17"
+            }
+          }
+        ],
+        "moduleData": {
+          "e59992z8-bb88-a788-9922-1623488775885": {
+            "loadApi": "/api/u/wisp/market",
+            "itemNavigation": "",
+            "response": {
+              "list": "records"
+            },
+            "request": {
+              "default": {},
+              "ps": "pageSize",
+              "pn": "pageNum"
+            },
+            "itemModule": {
+              "name": "spirit-market-new"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 7777799,
+      "form": {
+        "version": "1",
+        "name": "SignBox",
+        "title": "签到盒子",
+        "pageStyle": {
+          "background-color": "#050E17"
+        },
+        "request": {},
+        "response": {
+          "data": "data"
+        },
+        "container": {},
+        "modules": [
+          {
+            "type": "sign-box",
+            "key": "95afd71a-c8d5-11eb-aca5-0800271e55b7",
+            "name": "",
+            "container": {},
+            "binding": {
+              "isSign": "isSign",
+              "day": "day",
+              "list": "list"
+            }
+          }
+        ],
+        "moduleData": {
+          "95afd71a-c8d5-11eb-aca5-0800271e55b7": {}
+        }
+      }
+    },
+    {
+      "id": 666999,
+      "form": {
+        "version": "1",
+        "name": "PersonalInfo",
+        "title": "服务中心",
+        "pageStyle": {},
+        "request": {},
+        "response": {
+          "data": "data"
+        },
+        "container": {},
+        "modules": [
+          {
+            "type": "service",
+            "key": "95afd71a-c8d5-11eb-aca5-0800271e55b7",
+            "name": "",
+            "container": {},
+            "binding": {
+              "userId": "userId",
+              "name": "name",
+              "status": "status",
+              "invitationCode": "invitationCode",
+              "avatar": "avatar",
+              "level": "level",
+              "note": "note",
+              "bankName2": "bankName2"
+            }
+          }
+        ],
+        "dataSource": {
+          "api": "/api/u/player"
+        },
+        "moduleData": {}
+      }
+    },
+    {
+      "id": 6666699,
+      "form": {
+        "version": "1",
+        "name": "MyMarket",
+        "title": "我的精灵",
+        "pageStyle": {
+          "margin-top": "20px"
+        },
+        "loadApi": "",
+        "response": {
+          "data": "data"
+        },
+        "request": {},
+        "moduleContainer": {},
+        "modules": [
+          {
+            "type": "autolist",
+            "name": "",
+            "key": "e59992z8-bb88-a788-9922-1623488775885",
+            "container": {
+              "height": "",
+              "background": "#050E17"
+            }
+          }
+        ],
+        "moduleData": {
+          "e59992z8-bb88-a788-9922-1623488775885": {
+            "loadApi": "/api/u/player/record/book?onlyCurrentDay=1",
+            "itemNavigation": "",
+            "response": {
+              "list": "records"
+            },
+            "request": {
+              "default": {},
+              "ps": "pageSize",
+              "pn": "pageNum"
+            },
+            "itemModule": {
+              "name": "my-book-spirit-new"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 999666,
+      "form": {
+        "version": "1",
+        "name": "MyHistory",
+        "title": "我的记录",
+        "pageStyle": {},
+        "request": {},
+        "response": {
+          "data": "data"
+        },
+        "container": {},
+        "modules": [
+          {
+            "type": "my-history",
+            "key": "95afd71a-c8d5-11eb-aca5-0800271e55b7",
+            "name": "",
+            "container": {},
+            "binding": {
+              "coinsAmount": "coinsAmount",
+              "companionWispAmount": "companionWispAmount",
+              "companionWispCoin": "companionWispCoin",
+              "recommendPoints": "recommendPoints",
+              "tradeUnionPoints": "tradeUnionPoints",
+              "marketPoints": "marketPoints",
+              "depositPoints": "depositPoints",
+              "landRemainingDays": "landRemainingDays",
+              "invitingOneBallance": "invitingOneBallance",
+              "invitingTwoBallance": "invitingTwoBallance",
+              "signBallance": "signBallance",
+              "teamBallance": "teamBallance",
+              "signInCoinCredit": "signInCoinCredit",
+              "recommendCoinCredit": "recommendCoinCredit",
+              "teamCoinCredit": "teamCoinCredit",
+              "transferCoinCredit": "transferCoinCredit"
+            }
+          }
+        ],
+        "dataSource": {
+          "api": "/api/u/player/wallet"
+        },
+        "moduleData": {}
+      }
+    },
+    {
+      "id": 111222,
+      "form": {
+        "version": "1",
+        "name": "historys",
+        "title": "历史记录",
+        "pageStyle": {
+          "margin-top": "20px"
+        },
+        "loadApi": "",
+        "response": {
+          "data": "data"
+        },
+        "request": {},
+        "moduleContainer": {},
+        "modules": [
+          {
+            "type": "autolist",
+            "name": "",
+            "key": "e59992z8-bb88-a788-9922-1623488775885",
+            "container": {
+              "height": ""
+            }
+          }
+        ],
+        "moduleData": {
+          "e59992z8-bb88-a788-9922-1623488775885": {
+            "loadApi": "",
+            "itemNavigation": "",
+            "response": {
+              "list": "records"
+            },
+            "request": {
+              "default": {},
+              "ps": "pageSize",
+              "pn": "pageNum"
+            },
+            "itemModule": {
+              "name": "my-histort-new"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 555888,
+      "form": {
+        "version": "1",
+        "name": "Market",
+        "title": "我的团队",
+        "pageStyle": {},
+        "loadApi": "",
+        "response": {
+          "data": "data"
+        },
+        "request": {},
+        "moduleContainer": {},
+        "modules": [
+          {
+            "type": "dataShow",
+            "name": "",
+            "key": "e59992z8-bb88-a788-9922-6541654815492"
+          },
+          {
+            "type": "autolist",
+            "name": "",
+            "key": "e59992z8-bb88-a788-9922-1623488775885",
+            "container": {
+              "height": "",
+              "padding-top": "20px",
+              "background": "#050E17"
+            }
+          }
+        ],
+        "moduleData": {
+          "e59992z8-bb88-a788-9922-6541654815492": {
+            "loadApi": "/api/u/player/getUserTeam",
+            "fieldGroup": {
+              "recommendCount": "直推数",
+              "teamSize": "团队总人数",
+              "effectiveRecommendCount": "有效直推人数",
+              "effectiveTeamCount": "有效团队人数"
+            },
+            "unitGroup": {}
+          },
+          "e59992z8-bb88-a788-9922-1623488775885": {
+            "loadApi": "/api/u/player/getChildrenById",
+            "itemNavigation": "",
+            "response": {
+              "list": "records"
+            },
+            "request": {
+              "default": {},
+              "ps": "pageSize",
+              "pn": "pageNum"
+            },
+            "itemModule": {
+              "name": "team-new"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 111222333,
+      "form": {
+        "version": "1",
+        "name": "representation",
+        "title": "申述记录",
+        "pageStyle": {
+          "margin-top": "20px"
+        },
+        "loadApi": "",
+        "response": {
+          "data": "data"
+        },
+        "request": {},
+        "moduleContainer": {},
+        "modules": [
+          {
+            "type": "autolist",
+            "name": "",
+            "key": "e59992z8-bb88-a788-9922-1623488775885",
+            "container": {
+              "height": ""
+            }
+          }
+        ],
+        "moduleData": {
+          "e59992z8-bb88-a788-9922-1623488775885": {
+            "loadApi": "/api/u/order/wisp/complains",
+            "itemNavigation": "",
+            "response": {
+              "list": "records"
+            },
+            "request": {
+              "default": {},
+              "ps": "pageSize",
+              "pn": "pageNum"
+            },
+            "itemModule": {
+              "name": "more-representation-new"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 444555,
+      "form": {
+        "version": "1",
+        "name": "Market",
+        "title": "我的团队",
+        "pageStyle": {
+          "margin-top": "20px"
+        },
+        "loadApi": "",
+        "response": {
+          "data": "data"
+        },
+        "request": {},
+        "moduleContainer": {},
+        "modules": [
+          {
+            "type": "autolist",
+            "name": "",
+            "key": "e59992z8-bb88-a788-9922-1623488775885",
+            "container": {
+              "height": ""
+            }
+          }
+        ],
+        "moduleData": {
+          "e59992z8-bb88-a788-9922-1623488775885": {
+            "loadApi": "/api/u/player/getPlayerTeam",
+            "itemNavigation": "",
+            "response": {
+              "list": "records"
+            },
+            "request": {
+              "default": {}
+            },
+            "itemModule": {
+              "name": "check-team-list"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 225599,
+      "form": {
+        "version": "1",
+        "name": "MyMatchMarket",
+        "title": "我的精灵",
+        "pageStyle": {
+          "margin-top": "20px"
+        },
+        "loadApi": "",
+        "response": {
+          "data": "data"
+        },
+        "request": {},
+        "moduleContainer": {},
+        "modules": [
+          {
+            "type": "autolist",
+            "name": "",
+            "key": "e59992z8-bb88-a788-9922-1623488775858",
+            "container": {
+              "height": "",
+              "background": "#050E17"
+            }
+          }
+        ],
+        "moduleData": {
+          "e59992z8-bb88-a788-9922-1623488775858": {
+            "loadApi": "/api/u/order/wisp/buy?onlyCurrentHandling=1",
+            "itemNavigation": "",
+            "response": {
+              "list": "records"
+            },
+            "request": {
+              "default": {},
+              "ps": "pageSize",
+              "pn": "pageNum"
+            },
+            "itemModule": {
+              "name": "my-match-spirit-new"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 71541,
+      "form": {
+        "version": "1",
+        "name": "editAccount",
+        "title": "修改账户信息",
+        "pageStyle": {},
+        "request": {},
+        "response": {
+          "data": "data"
+        },
+        "container": {},
+        "modules": [
+          {
+            "type": "autoform",
+            "key": "96afd71a-c8d5-11eb-aca5-0800271e55b7",
+            "name": "",
+            "container": {}
+          }
+        ],
+        "moduleData": {
+          "96afd71a-c8d5-11eb-aca5-0800271e55b7": {
+            "fields": [
+              {
+                "__config__": {
+                  "layout": "rowFormItem",
+                  "tagIcon": "row",
+                  "layoutTree": true,
+                  "document": "https://element.eleme.cn/#/zh-CN/component/layout#row-attributes",
+                  "span": 24,
+                  "formId": 101,
+                  "renderKey": "1011641015256431",
+                  "componentName": "微信",
+                  "children": [
+                    {
+                      "__config__": {
+                        "label": "户名",
+                        "labelWidth": null,
+                        "showLabel": true,
+                        "changeTag": true,
+                        "tag": "el-input",
+                        "tagIcon": "input",
+                        "required": false,
+                        "layout": "colFormItem",
+                        "span": 24,
+                        "document": "https://element.eleme.cn/#/zh-CN/component/input",
+                        "regList": [],
+                        "formId": 102,
+                        "renderKey": "1021641015302450"
+                      },
+                      "__slot__": {
+                        "prepend": "",
+                        "append": ""
+                      },
+                      "placeholder": "请输入户名",
+                      "placeholder-style": "color: #fff",
+                      "inputStyle": "color: #fff",
+                      "style": {
+                        "width": "100%"
+                      },
+                      "clearable": true,
+                      "prefix-icon": "",
+                      "suffix-icon": "",
+                      "maxlength": null,
+                      "show-word-limit": false,
+                      "readonly": false,
+                      "hidden": false,
+                      "disabled": false,
+                      "__vModel__": "wechatAccount"
+                    },
+                    {
+                      "__config__": {
+                        "label": "支付二维码",
+                        "labelWidth": null,
+                        "showLabel": true,
+                        "tag": "el-image",
+                        "defaultValue": "",
+                        "required": false,
+                        "layout": "colFormItem"
+                      },
+                      "max-count": "1",
+                      "readonly": false,
+                      "disabled": false,
+                      "__vModel__": "wechatQrCodePhotoUrl"
+                    }
+                  ]
+                },
+                "type": "default",
+                "justify": "start",
+                "align": "top"
+              },
+              {
+                "__config__": {
+                  "layout": "rowFormItem",
+                  "tagIcon": "row",
+                  "layoutTree": true,
+                  "document": "https://element.eleme.cn/#/zh-CN/component/layout#row-attributes",
+                  "span": 24,
+                  "formId": 105,
+                  "renderKey": "1051641015334975",
+                  "componentName": "支付宝",
+                  "children": [
+                    {
+                      "__config__": {
+                        "label": "户名",
+                        "labelWidth": null,
+                        "showLabel": true,
+                        "changeTag": true,
+                        "tag": "el-input",
+                        "tagIcon": "input",
+                        "required": false,
+                        "layout": "colFormItem",
+                        "span": 24,
+                        "document": "https://element.eleme.cn/#/zh-CN/component/input",
+                        "regList": [],
+                        "formId": 107,
+                        "renderKey": "1071641015367858"
+                      },
+                      "__slot__": {
+                        "prepend": "",
+                        "append": ""
+                      },
+                      "placeholder": "请输入户名",
+                      "placeholder-style": "color: #fff",
+                      "inputStyle": "color: #fff",
+                      "style": {
+                        "width": "100%"
+                      },
+                      "clearable": true,
+                      "prefix-icon": "",
+                      "suffix-icon": "",
+                      "maxlength": null,
+                      "show-word-limit": false,
+                      "readonly": false,
+                      "hidden": false,
+                      "disabled": false,
+                      "__vModel__": "alipayAccount"
+                    },
+                    {
+                      "__config__": {
+                        "label": "支付二维码",
+                        "labelWidth": null,
+                        "showLabel": true,
+                        "tag": "el-image",
+                        "defaultValue": "",
+                        "required": false,
+                        "layout": "colFormItem"
+                      },
+                      "max-count": "1",
+                      "readonly": false,
+                      "disabled": false,
+                      "__vModel__": "alipayQrCodePhotoUrl"
+                    }
+                  ]
+                },
+                "type": "default",
+                "justify": "start",
+                "align": "top"
+              },
+              {
+                "__config__": {
+                  "layout": "rowFormItem",
+                  "tagIcon": "row",
+                  "layoutTree": true,
+                  "document": "https://element.eleme.cn/#/zh-CN/component/layout#row-attributes",
+                  "span": 24,
+                  "formId": 106,
+                  "renderKey": "1061641015339774",
+                  "componentName": "银行卡信息1",
+                  "children": [
+                    {
+                      "__config__": {
+                        "label": "开户行",
+                        "labelWidth": null,
+                        "showLabel": true,
+                        "changeTag": true,
+                        "tag": "el-input",
+                        "tagIcon": "input",
+                        "required": false,
+                        "layout": "colFormItem",
+                        "span": 24,
+                        "document": "https://element.eleme.cn/#/zh-CN/component/input",
+                        "regList": [],
+                        "formId": 109,
+                        "renderKey": "1091641015423239"
+                      },
+                      "__slot__": {
+                        "prepend": "",
+                        "append": ""
+                      },
+                      "placeholder": "请输入开户行",
+                      "placeholder-style": "color: #fff",
+                      "inputStyle": "color: #fff",
+                      "style": {
+                        "width": "100%"
+                      },
+                      "clearable": true,
+                      "prefix-icon": "",
+                      "suffix-icon": "",
+                      "maxlength": null,
+                      "show-word-limit": false,
+                      "readonly": false,
+                      "hidden": false,
+                      "disabled": false,
+                      "__vModel__": "bankName"
+                    },
+                    {
+                      "__config__": {
+                        "label": "户名",
+                        "labelWidth": null,
+                        "showLabel": true,
+                        "changeTag": true,
+                        "tag": "el-input",
+                        "tagIcon": "input",
+                        "required": false,
+                        "layout": "colFormItem",
+                        "span": 24,
+                        "document": "https://element.eleme.cn/#/zh-CN/component/input",
+                        "regList": [],
+                        "formId": 110,
+                        "renderKey": "1101641015461694"
+                      },
+                      "__slot__": {
+                        "prepend": "",
+                        "append": ""
+                      },
+                      "placeholder": "请输入户名",
+                      "placeholder-style": "color: #fff",
+                      "inputStyle": "color: #fff",
+                      "style": {
+                        "width": "100%"
+                      },
+                      "clearable": true,
+                      "prefix-icon": "",
+                      "suffix-icon": "",
+                      "maxlength": null,
+                      "show-word-limit": false,
+                      "readonly": false,
+                      "hidden": false,
+                      "disabled": false,
+                      "__vModel__": "bankAccountName"
+                    },
+                    {
+                      "__config__": {
+                        "label": "银行卡号",
+                        "labelWidth": null,
+                        "showLabel": true,
+                        "changeTag": true,
+                        "tag": "el-input",
+                        "tagIcon": "input",
+                        "required": false,
+                        "layout": "colFormItem",
+                        "span": 24,
+                        "document": "https://element.eleme.cn/#/zh-CN/component/input",
+                        "regList": [],
+                        "formId": 109,
+                        "renderKey": "1091641015423239"
+                      },
+                      "__slot__": {
+                        "prepend": "",
+                        "append": ""
+                      },
+                      "placeholder": "请输入银行卡号",
+                      "placeholder-style": "color: #fff",
+                      "inputStyle": "color: #fff",
+                      "style": {
+                        "width": "100%"
+                      },
+                      "clearable": true,
+                      "prefix-icon": "",
+                      "suffix-icon": "",
+                      "maxlength": null,
+                      "show-word-limit": false,
+                      "readonly": false,
+                      "hidden": false,
+                      "disabled": false,
+                      "__vModel__": "bankAccountNumber"
+                    }
+                  ]
+                },
+                "type": "default",
+                "justify": "start",
+                "align": "top"
+              },
+              {
+                "__config__": {
+                  "layout": "rowFormItem",
+                  "tagIcon": "row",
+                  "layoutTree": true,
+                  "document": "https://element.eleme.cn/#/zh-CN/component/layout#row-attributes",
+                  "span": 24,
+                  "formId": 106,
+                  "renderKey": "1061641015339774",
+                  "componentName": "银行卡信息2",
+                  "children": [
+                    {
+                      "__config__": {
+                        "label": "开户行",
+                        "labelWidth": null,
+                        "showLabel": true,
+                        "changeTag": true,
+                        "tag": "el-input",
+                        "tagIcon": "input",
+                        "required": false,
+                        "layout": "colFormItem",
+                        "span": 24,
+                        "document": "https://element.eleme.cn/#/zh-CN/component/input",
+                        "regList": [],
+                        "formId": 109,
+                        "renderKey": "1091641015423239"
+                      },
+                      "__slot__": {
+                        "prepend": "",
+                        "append": ""
+                      },
+                      "placeholder": "请输入开户行",
+                      "placeholder-style": "color: #fff",
+                      "inputStyle": "color: #fff",
+                      "style": {
+                        "width": "100%"
+                      },
+                      "clearable": true,
+                      "prefix-icon": "",
+                      "suffix-icon": "",
+                      "maxlength": null,
+                      "show-word-limit": false,
+                      "readonly": false,
+                      "hidden": false,
+                      "disabled": false,
+                      "__vModel__": "bankName2"
+                    },
+                    {
+                      "__config__": {
+                        "label": "户名",
+                        "labelWidth": null,
+                        "showLabel": true,
+                        "changeTag": true,
+                        "tag": "el-input",
+                        "tagIcon": "input",
+                        "required": false,
+                        "layout": "colFormItem",
+                        "span": 24,
+                        "document": "https://element.eleme.cn/#/zh-CN/component/input",
+                        "regList": [],
+                        "formId": 110,
+                        "renderKey": "1101641015461694"
+                      },
+                      "__slot__": {
+                        "prepend": "",
+                        "append": ""
+                      },
+                      "placeholder": "请输入户名",
+                      "placeholder-style": "color: #fff",
+                      "inputStyle": "color: #fff",
+                      "style": {
+                        "width": "100%"
+                      },
+                      "clearable": true,
+                      "prefix-icon": "",
+                      "suffix-icon": "",
+                      "maxlength": null,
+                      "show-word-limit": false,
+                      "readonly": false,
+                      "hidden": false,
+                      "disabled": false,
+                      "__vModel__": "bankAccountName2"
+                    },
+                    {
+                      "__config__": {
+                        "label": "银行卡号",
+                        "labelWidth": null,
+                        "showLabel": true,
+                        "changeTag": true,
+                        "tag": "el-input",
+                        "tagIcon": "input",
+                        "required": false,
+                        "layout": "colFormItem",
+                        "span": 24,
+                        "document": "https://element.eleme.cn/#/zh-CN/component/input",
+                        "regList": [],
+                        "formId": 109,
+                        "renderKey": "1091641015423239"
+                      },
+                      "__slot__": {
+                        "prepend": "",
+                        "append": ""
+                      },
+                      "placeholder": "请输入银行卡号",
+                      "placeholder-style": "color: #fff",
+                      "inputStyle": "color: #fff",
+                      "style": {
+                        "width": "100%"
+                      },
+                      "clearable": true,
+                      "prefix-icon": "",
+                      "suffix-icon": "",
+                      "maxlength": null,
+                      "show-word-limit": false,
+                      "readonly": false,
+                      "hidden": false,
+                      "disabled": false,
+                      "__vModel__": "bankAccountNumber2"
+                    }
+                  ]
+                },
+                "type": "default",
+                "justify": "start",
+                "align": "top"
+              },
+              {
+                "__config__": {
+                  "layout": "rowFormItem",
+                  "tagIcon": "row",
+                  "layoutTree": true,
+                  "document": "https://element.eleme.cn/#/zh-CN/component/layout#row-attributes",
+                  "span": 24,
+                  "formId": 106,
+                  "renderKey": "1061641015339774",
+                  "componentName": "验证码",
+                  "children": [
+                    {
+                      "__config__": {
+                        "label": "手机验证码",
+                        "labelWidth": null,
+                        "showLabel": true,
+                        "changeTag": true,
+                        "tag": "el-input",
+                        "tagIcon": "yzm",
+                        "required": false,
+                        "layout": "colFormItem",
+                        "span": 24,
+                        "document": "https://element.eleme.cn/#/zh-CN/component/input",
+                        "regList": [],
+                        "formId": 109,
+                        "renderKey": "1091641015423239"
+                      },
+                      "__slot__": {
+                        "prepend": "",
+                        "append": "获取验证码"
+                      },
+                      "placeholder": "请输入手机验证码",
+                      "placeholder-style": "color: #fff",
+                      "inputStyle": "color: #fff",
+                      "style": {
+                        "width": "100%"
+                      },
+                      "clearable": true,
+                      "prefix-icon": "",
+                      "suffix-icon": "",
+                      "maxlength": null,
+                      "show-word-limit": false,
+                      "readonly": false,
+                      "hidden": false,
+                      "disabled": false,
+                      "__vModel__": "verifyCode"
+                    }
+                  ]
+                },
+                "type": "default",
+                "justify": "start",
+                "align": "top"
+              }
+            ],
+            "formRef": "elForm",
+            "formModel": "formData",
+            "size": "medium",
+            "labelPosition": "right",
+            "labelWidth": 100,
+            "formRules": "rules",
+            "gutter": 15,
+            "disabled": false,
+            "span": 24,
+            "formBtns": true,
+            "saveApi": "/api/u/player",
+            "saveMethod": "PUT",
+            "loadApi": "/api/u/player",
+            "isLawForm": false
+          }
+        }
+      }
+    },
+    {
+      "id": null,
+      "form": {
+        "field103": "",
+        "field108": ""
+      }
+    },
+    {
+      "id": 444555999,
+      "form": {
+        "version": "1",
+        "name": "MyMarket",
+        "title": "我的精灵",
+        "pageStyle": {},
+        "loadApi": "",
+        "response": {
+          "data": "data"
+        },
+        "request": {},
+        "moduleContainer": {},
+        "modules": [
+          {
+            "type": "autolist",
+            "name": "",
+            "key": "e59992z8-bb88-a788-9922-1623488775885",
+            "container": {
+              "height": "",
+              "background": "#050E17"
+            }
+          }
+        ],
+        "moduleData": {
+          "e59992z8-bb88-a788-9922-1623488775885": {
+            "loadApi": "/api/u/player/queryPlayerWispInstance?stage=GROWING,FROZEN",
+            "itemNavigation": "",
+            "response": {
+              "list": "records"
+            },
+            "request": {
+              "default": {},
+              "ps": "pageSize",
+              "pn": "pageNum"
+            },
+            "itemModule": {
+              "name": "my-adopt-spirit-new"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 777444111,
+      "form": {
+        "version": "1",
+        "name": "MyMarket",
+        "title": "我的精灵",
+        "pageStyle": {
+          "margin-top": "20px"
+        },
+        "loadApi": "",
+        "response": {
+          "data": "data"
+        },
+        "request": {},
+        "moduleContainer": {},
+        "modules": [
+          {
+            "type": "autolist",
+            "name": "",
+            "key": "e59992z8-bb88-a788-9922-1623488775885",
+            "container": {
+              "height": "",
+              "background": "#050E17"
+            }
+          }
+        ],
+        "moduleData": {
+          "e59992z8-bb88-a788-9922-1623488775885": {
+            "loadApi": "/api/u/wisp/selling?onlyCurrentDay=1",
+            "itemNavigation": "",
+            "response": {
+              "list": "records"
+            },
+            "request": {
+              "default": {},
+              "ps": "pageSize=100",
+              "pn": "pageNum"
+            },
+            "itemModule": {
+              "name": "my-self-spirit-new"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 11447722,
+      "form": {
+        "version": "1",
+        "name": "Market",
+        "title": "转化精灵",
+        "pageStyle": {
+          "margin-top": "20px"
+        },
+        "loadApi": "",
+        "response": {
+          "data": "data"
+        },
+        "request": {},
+        "moduleContainer": {},
+        "modules": [
+          {
+            "type": "autolist",
+            "name": "",
+            "key": "e59992z8-bb88-a788-9922-1623488775885",
+            "container": {
+              "height": ""
+            }
+          }
+        ],
+        "moduleData": {
+          "e59992z8-bb88-a788-9922-1623488775885": {
+            "loadApi": "/api/u/wisp/market",
+            "itemNavigation": "",
+            "response": {
+              "list": "records"
+            },
+            "request": {
+              "default": {},
+              "ps": "pageSize",
+              "pn": "pageNum"
+            },
+            "itemModule": {
+              "name": "transfer-spirit-new"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 22559988,
+      "form": {
+        "version": "1",
+        "name": "Market",
+        "title": "转化精灵",
+        "pageStyle": {
+          "margin-top": "20px"
+        },
+        "loadApi": "",
+        "response": {
+          "data": "data"
+        },
+        "request": {},
+        "moduleContainer": {},
+        "modules": [
+          {
+            "type": "autolist",
+            "name": "",
+            "key": "e59992z8-bb88-a788-9922-1623488775885",
+            "container": {
+              "height": ""
+            }
+          }
+        ],
+        "moduleData": {
+          "e59992z8-bb88-a788-9922-1623488775885": {
+            "loadApi": "/api/u/wisp/market",
+            "itemNavigation": "",
+            "response": {
+              "list": "records"
+            },
+            "request": {
+              "default": {},
+              "ps": "pageSize",
+              "pn": "pageNum"
+            },
+            "itemModule": {
+              "name": "transfer-spirit-two-new"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 6666699999,
+      "form": {
+        "version": "1",
+        "name": "MyMarket",
+        "title": "我的精灵",
+        "pageStyle": {
+          "margin-top": "20px"
+        },
+        "loadApi": "",
+        "response": {
+          "data": "data"
+        },
+        "request": {},
+        "moduleContainer": {},
+        "modules": [
+          {
+            "type": "autolist",
+            "name": "",
+            "key": "e59992z8-bb88-a788-9922-1623488775885",
+            "container": {
+              "height": "",
+              "background": "#050E17"
+            }
+          }
+        ],
+        "moduleData": {
+          "e59992z8-bb88-a788-9922-1623488775885": {
+            "loadApi": "/api/u/player/record/book?onlyCurrentDay=0",
+            "itemNavigation": "",
+            "response": {
+              "list": "records"
+            },
+            "columns": 2,
+            "request": {
+              "default": {},
+              "ps": "pageSize",
+              "pn": "pageNum"
+            },
+            "itemModule": {
+              "name": "my-book-spirit-history-new"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 2255999999,
+      "form": {
+        "version": "1",
+        "name": "MyMatchMarket",
+        "title": "我的精灵",
+        "pageStyle": {
+          "margin-top": "20px"
+        },
+        "loadApi": "",
+        "response": {
+          "data": "data"
+        },
+        "request": {},
+        "moduleContainer": {},
+        "modules": [
+          {
+            "type": "autolist",
+            "name": "",
+            "key": "e59992z8-bb88-a788-9922-1623488775858",
+            "container": {
+              "height": "",
+              "background": "#050E17"
+            }
+          }
+        ],
+        "moduleData": {
+          "e59992z8-bb88-a788-9922-1623488775858": {
+            "loadApi": "/api/u/order/wisp/buy?onlyCurrentHandling=0",
+            "itemNavigation": "",
+            "response": {
+              "list": "records"
+            },
+            "columns": 2,
+            "request": {
+              "default": {},
+              "ps": "pageSize",
+              "pn": "pageNum"
+            },
+            "itemModule": {
+              "name": "my-match-spirit-history-new"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 777444111999,
+      "form": {
+        "version": "1",
+        "name": "MyMarket",
+        "title": "我的精灵",
+        "pageStyle": {
+          "margin-top": "20px"
+        },
+        "loadApi": "",
+        "response": {
+          "data": "data"
+        },
+        "request": {},
+        "moduleContainer": {},
+        "modules": [
+          {
+            "type": "autolist",
+            "name": "",
+            "key": "e59992z8-bb88-a788-9922-1623488775885",
+            "container": {
+              "height": "",
+              "background": "#050E17"
+            }
+          }
+        ],
+        "moduleData": {
+          "e59992z8-bb88-a788-9922-1623488775885": {
+            "loadApi": "/api/u/order/wisp/record/sell",
+            "itemNavigation": "",
+            "response": {
+              "list": "records"
+            },
+            "columns": 2,
+            "request": {
+              "default": {},
+              "ps": "pageSize=100",
+              "pn": "pageNum"
+            },
+            "itemModule": {
+              "name": "my-self-spirit-history-new"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 333444555,
+      "form": {
+        "version": "1",
+        "name": "MyTeam",
+        "title": "我的团队",
+        "pageStyle": {
+          "margin-top": "20px"
+        },
+        "loadApi": "",
+        "response": {
+          "data": "data"
+        },
+        "request": {},
+        "moduleContainer": {},
+        "modules": [
+          {
+            "type": "autolist",
+            "name": "",
+            "key": "e59992z8-bb88-a788-9922-1623488775885",
+            "container": {
+              "height": ""
+            }
+          }
+        ],
+        "moduleData": {
+          "e59992z8-bb88-a788-9922-1623488775885": {
+            "loadApi": "/api/u/player/getUnpaidTeamUserById",
+            "itemNavigation": "",
+            "response": {
+              "list": "records"
+            },
+            "request": {
+              "default": {},
+              "ps": "pageSize",
+              "pn": "pageNum"
+            },
+            "itemModule": {
+              "name": "no-pay-new"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "dataset": [
+    {
+      "id": 100,
+      "data": {
+        "list": [
+          {
+            "name": "待审核111",
+            "code": "列表~列表",
+            "createTime": "2021年",
+            "status": "START"
+          },
+          {
+            "name": "审核中",
+            "code": "列表~列表",
+            "createTime": "2021年",
+            "status": "VERIFYING"
+          },
+          {
+            "name": "被拒绝",
+            "code": "列表~列表",
+            "createTime": "2021年",
+            "status": "CLOSE_REJECTED"
+          },
+          {
+            "name": "已审核",
+            "code": "列表~列表",
+            "createTime": "2021年",
+            "status": "CLOSE_APPROVED"
+          }
+        ]
+      }
+    },
+    {
+      "id": 9999998,
+      "data": {
+        "formHost": "/form",
+        "dataHost": "/data",
+        "endpoint": ""
+      }
+    },
+    {
+      "id": 9999999,
+      "data": {
+        "autoForm": "https://img1.baidu.com/it/u=2363594029,2446377516&fm=26&fmt=auto",
+        "autoList": "https://img2.baidu.com/it/u=1773021408,420073988&fm=253&fmt=auto&app=120&f=JPEG?w=393&h=499",
+        "autoPage": "https://img0.baidu.com/it/u=2406823350,3411035947&fm=26&fmt=auto",
+        "defaultUser": "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F201912%2F25%2F20191225224833_zloky.thumb.400_0.jpg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1642763571&t=c5e12ca1f367a29af84bbde1c5ad7d23",
+        "exit": "https://ai.hdqmjs.com/attachments/public/modal-exit.png",
+        "jingling": "https://ai.hdqmjs.com/attachments/some/精灵币.png"
+      }
+    },
+    {
+      "id": 55555,
+      "data": {
+        "list": [
+          {}
+        ]
+      }
+    },
+    {
+      "id": 7512,
+      "data": {
+        "image": "[\"https://pic1.zhimg.com/v2-d58ce10bf4e01f5086c604a9cfed29f3_r.jpg?source=1940ef5c\",\"https://th.bing.com/th/id/OIP.1eFBRKkNrO_OfRQ2KpSTVwHaE7?w=281&h=188&c=7&r=0&o=5&pid=1.7\"]"
+      }
+    },
+    {
+      "id": 550311,
+      "data": {
+        "isSign": false,
+        "day": "8",
+        "list": [
+          {
+            "isSign": true,
+            "status": "ended",
+            "day": 1,
+            "image": "https://uploadfile.huiyi8.com/up/a1/6e/26/a16e262887ceca224a6bd5638c7f34ee.png",
+            "text": "文件x1"
+          },
+          {
+            "isSign": true,
+            "status": "ended",
+            "day": 2,
+            "image": "https://uploadfile.huiyi8.com/up/a1/6e/26/a16e262887ceca224a6bd5638c7f34ee.png",
+            "text": "文件x1"
+          },
+          {
+            "isSign": true,
+            "status": "ended",
+            "day": 3,
+            "image": "https://uploadfile.huiyi8.com/up/a1/6e/26/a16e262887ceca224a6bd5638c7f34ee.png",
+            "text": "文件x1"
+          },
+          {
+            "isSign": true,
+            "status": "ended",
+            "day": 4,
+            "image": "https://uploadfile.huiyi8.com/up/a1/6e/26/a16e262887ceca224a6bd5638c7f34ee.png",
+            "text": "文件x1"
+          },
+          {
+            "isSign": true,
+            "status": "ended",
+            "day": 5,
+            "image": "https://uploadfile.huiyi8.com/up/a1/6e/26/a16e262887ceca224a6bd5638c7f34ee.png",
+            "text": "文件x1"
+          },
+          {
+            "isSign": true,
+            "status": "ended",
+            "day": 6,
+            "image": "https://uploadfile.huiyi8.com/up/a1/6e/26/a16e262887ceca224a6bd5638c7f34ee.png",
+            "text": "文件x1"
+          },
+          {
+            "isSign": true,
+            "status": "ended",
+            "day": 7,
+            "image": "https://uploadfile.huiyi8.com/up/a1/6e/26/a16e262887ceca224a6bd5638c7f34ee.png",
+            "text": "文件x1"
+          },
+          {
+            "isSign": false,
+            "status": "ended",
+            "day": 8,
+            "image": "https://uploadfile.huiyi8.com/up/a1/6e/26/a16e262887ceca224a6bd5638c7f34ee.png",
+            "text": "文件x1"
+          },
+          {
+            "isSign": true,
+            "status": "ended",
+            "day": 9,
+            "image": "https://uploadfile.huiyi8.com/up/a1/6e/26/a16e262887ceca224a6bd5638c7f34ee.png",
+            "text": "文件x1"
+          },
+          {
+            "isSign": true,
+            "status": "today",
+            "day": 10,
+            "image": "https://uploadfile.huiyi8.com/up/a1/6e/26/a16e262887ceca224a6bd5638c7f34ee.png",
+            "text": "文件x1"
+          },
+          {
+            "isSign": false,
+            "status": "normal",
+            "day": 11,
+            "image": "https://uploadfile.huiyi8.com/up/a1/6e/26/a16e262887ceca224a6bd5638c7f34ee.png",
+            "text": "文件x1"
+          },
+          {
+            "isSign": false,
+            "status": "normal",
+            "day": 12,
+            "image": "https://uploadfile.huiyi8.com/up/a1/6e/26/a16e262887ceca224a6bd5638c7f34ee.png",
+            "text": "文件x1"
+          },
+          {
+            "isSign": false,
+            "status": "normal",
+            "day": 13,
+            "image": "https://uploadfile.huiyi8.com/up/a1/6e/26/a16e262887ceca224a6bd5638c7f34ee.png",
+            "text": "文件x1"
+          },
+          {
+            "isSign": false,
+            "status": "normal",
+            "day": 14,
+            "image": "https://uploadfile.huiyi8.com/up/a1/6e/26/a16e262887ceca224a6bd5638c7f34ee.png",
+            "text": "文件x1"
+          },
+          {
+            "isSign": false,
+            "status": "normal",
+            "day": 15,
+            "image": "https://uploadfile.huiyi8.com/up/a1/6e/26/a16e262887ceca224a6bd5638c7f34ee.png",
+            "text": "文件x1"
+          },
+          {
+            "isSign": false,
+            "status": "normal",
+            "day": 16,
+            "image": "https://uploadfile.huiyi8.com/up/a1/6e/26/a16e262887ceca224a6bd5638c7f34ee.png",
+            "text": "文件x1"
+          },
+          {
+            "isSign": false,
+            "status": "normal",
+            "day": 17,
+            "image": "https://uploadfile.huiyi8.com/up/a1/6e/26/a16e262887ceca224a6bd5638c7f34ee.png",
+            "text": "文件x1"
+          },
+          {
+            "isSign": false,
+            "status": "normal",
+            "day": 18,
+            "image": "https://uploadfile.huiyi8.com/up/a1/6e/26/a16e262887ceca224a6bd5638c7f34ee.png",
+            "text": "文件x1"
+          },
+          {
+            "isSign": false,
+            "status": "normal",
+            "day": 19,
+            "image": "https://uploadfile.huiyi8.com/up/a1/6e/26/a16e262887ceca224a6bd5638c7f34ee.png",
+            "text": "文件x1"
+          },
+          {
+            "isSign": false,
+            "status": "normal",
+            "day": 20,
+            "image": "https://uploadfile.huiyi8.com/up/a1/6e/26/a16e262887ceca224a6bd5638c7f34ee.png",
+            "text": "文件x1"
+          },
+          {
+            "isSign": false,
+            "status": "normal",
+            "day": 21,
+            "image": "https://uploadfile.huiyi8.com/up/a1/6e/26/a16e262887ceca224a6bd5638c7f34ee.png",
+            "text": "文件x1"
+          },
+          {
+            "isSign": false,
+            "status": "normal",
+            "day": 22,
+            "image": "https://uploadfile.huiyi8.com/up/a1/6e/26/a16e262887ceca224a6bd5638c7f34ee.png",
+            "text": "文件x1"
+          },
+          {
+            "isSign": false,
+            "status": "normal",
+            "day": 23,
+            "image": "https://uploadfile.huiyi8.com/up/a1/6e/26/a16e262887ceca224a6bd5638c7f34ee.png",
+            "text": "文件x1"
+          },
+          {
+            "isSign": false,
+            "status": "normal",
+            "day": 24,
+            "image": "https://uploadfile.huiyi8.com/up/a1/6e/26/a16e262887ceca224a6bd5638c7f34ee.png",
+            "text": "文件x1"
+          },
+          {
+            "isSign": false,
+            "status": "normal",
+            "day": 25,
+            "image": "https://uploadfile.huiyi8.com/up/a1/6e/26/a16e262887ceca224a6bd5638c7f34ee.png",
+            "text": "文件x1"
+          },
+          {
+            "isSign": false,
+            "status": "normal",
+            "day": 26,
+            "image": "https://uploadfile.huiyi8.com/up/a1/6e/26/a16e262887ceca224a6bd5638c7f34ee.png",
+            "text": "文件x1"
+          },
+          {
+            "isSign": false,
+            "status": "normal",
+            "day": 27,
+            "image": "https://uploadfile.huiyi8.com/up/a1/6e/26/a16e262887ceca224a6bd5638c7f34ee.png",
+            "text": "文件x1"
+          },
+          {
+            "isSign": false,
+            "status": "normal",
+            "day": 28,
+            "image": "https://uploadfile.huiyi8.com/up/a1/6e/26/a16e262887ceca224a6bd5638c7f34ee.png",
+            "text": "文件x1"
+          },
+          {
+            "isSign": false,
+            "status": "normal",
+            "day": 29,
+            "image": "https://uploadfile.huiyi8.com/up/a1/6e/26/a16e262887ceca224a6bd5638c7f34ee.png",
+            "text": "文件x1"
+          },
+          {
+            "isSign": false,
+            "status": "normal",
+            "day": 30,
+            "image": "https://uploadfile.huiyi8.com/up/a1/6e/26/a16e262887ceca224a6bd5638c7f34ee.png",
+            "text": "文件x1"
+          },
+          {
+            "isSign": false,
+            "status": "normal",
+            "day": 31,
+            "image": "https://uploadfile.huiyi8.com/up/a1/6e/26/a16e262887ceca224a6bd5638c7f34ee.png",
+            "text": "文件x1"
+          }
+        ]
+      }
+    },
+    {
+      "id": 1000000,
+      "data": {
+        "navs": [
+          {
+            "title": "精灵广场",
+            "image": "/static/public/elvesSquare.png"
+          },
+          {
+            "title": "我的精灵",
+            "image": "/static/public/MySpirit.png"
+          },
+          {
+            "title": "服务中心",
+            "image": "/static/public/serviceCenter.png"
+          }
+        ],
+        "defaultClick": 0,
+        "api": [
+          "?id=41356",
+          "?id=41357",
+          "?id=666999"
+        ]
+      }
+    },
+    {
+      "id": 41356,
+      "data": {
+        "tabs": [
+          {
+            "title": "精灵商城",
+            "id": "8888899"
+          },
+          {
+            "title": "签到抽盒",
+            "id": "7777799"
+          }
+        ]
+      }
+    },
+    {
+      "id": 6666699,
+      "data": {
+        "tabs": [
+          {
+            "title": "预约精灵",
+            "url": "/pages/defaultPage/tabsPage?id=6666699"
+          }
+        ]
+      }
+    },
+    {
+      "id": 41357,
+      "data": {
+        "tabs": [
+          {
+            "title": "預約記錄",
+            "id": "6666699",
+            "children": [
+              {
+                "title": "當前預約",
+                "id": "6666699"
+              },
+              {
+                "title": "預約記錄",
+                "id": "6666699999"
+              }
+            ]
+          },
+          {
+            "title": "匹配記錄",
+            "id": "225599",
+            "children": [
+              {
+                "title": "當前匹配",
+                "id": "225599"
+              },
+              {
+                "title": "匹配記錄",
+                "id": "2255999999"
+              }
+            ]
+          },
+          {
+            "title": "領養記錄",
+            "id": "444555999"
+          },
+          {
+            "title": "出售記錄",
+            "id": "777444111",
+            "children": [
+              {
+                "title": "當前出售",
+                "id": "777444111"
+              },
+              {
+                "title": "出售記錄",
+                "id": "777444111999"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 666999,
+      "data": {
+        "tabs": [
+          {
+            "title": "團隊",
+            "id": "555888"
+          },
+          {
+            "title": "未付款列表",
+            "id": "333444555"
+          },
+          {
+            "title": "直推查询列表",
+            "id": "444555"
+          }
+        ]
+      }
+    }
+  ],
+  "count": 1,
+  "form": {}
+}

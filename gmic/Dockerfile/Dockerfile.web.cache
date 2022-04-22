@@ -1,0 +1,25 @@
+FROM zelejs/allin-web:git AS git
+
+RUN ssh-keyscan -p 7207 git.f.smallsaas.cn >> ~/.ssh/known_hosts
+
+WORKDIR /usr
+
+RUN git clone ssh://pi@git.f.smallsaas.cn:7207/repo/git/gmic/gmic-cad-web-pages.git --single-branch -b master src
+
+
+FROM daocloud.io/library/node:14 AS build
+
+
+WORKDIR /usr
+COPY --from=git /usr/src ./src
+
+WORKDIR /usr/src/web
+
+COPY --from=git /usr/src/web/package.json ./
+
+RUN  npm config set registry https://registry.npm.taobao.org
+
+RUN npm install --force
+
+# RUN  npm build
+# COPY  /usr/src/web/dist/* /war/src/main/webapp

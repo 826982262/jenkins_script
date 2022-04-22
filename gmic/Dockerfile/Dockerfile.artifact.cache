@@ -1,0 +1,31 @@
+# DOCKER_BUILDKIT=1 docker build . -t allin-web:cache-package-m2 --no-cache
+## src stage
+FROM zelejs/allin-web:git AS git
+RUN ssh-keyscan -p 7207 git.f.smallsaas.cn >> ~/.ssh/known_hosts
+####################################
+WORKDIR /usr
+#RUN git clone git@github.com:smallsaas/gmic-cad-artifact.git --single-branch -b master src
+RUN git clone ssh://pi@git.f.smallsaas.cn:7207/repo/git/gmic/gmic-cad-users.git --single-branch -b master src
+###################
+
+## m2 stage
+FROM zelejs/allin-web:alpine-m2 AS m2
+
+#builk-stage
+FROM maven:3.6-openjdk-11-slim AS build
+WORKDIR /root/m2
+COPY --from=m2 /root/.m2 /root/.m2
+
+## mvn package
+WORKDIR /usr/src
+
+COPY --from=git /usr/src/pom.xml  ./pom.xml
+COPY --from=git /usr/src/src ./src
+RUN rm -rf /root/.m2/repository/com/jfeat/
+RUN mvn -DskipStandalone=true package -Dmaven.test.skip=true
+
+
+## final-cache
+FROM alpine:3.12
+WORKDIR /root/.m2
+COPY --from=build /root/.m2 /root/.m2
